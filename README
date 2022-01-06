@@ -1,0 +1,19 @@
+324CA Dumistracel Eduard-Costin
+
+	In realizarea temei am folosit JSONParser pentru citire si objectMapper 
+pentru scriere.In realizarea acestui proiect am folosit Singleton pattern si
+Strategy pattern.
+
+	Am realizat clase pentru stocarea datelor(copil, cadou, schimbari anuale,
+update copii), pentru citire (InputData, InputLoader) si pentru afisare
+(AnnualChanges, AnnualChildren). Clasa de Constants contine constantele
+necesare pentru citire si scriere. Clasa Utils contine functii care ajuta la
+convertarea a diferitelor liste sau Arrays si distribuirea cadourilor.
+
+	Average se realizeaza in functie de varsta si avem 3 tipuri(pentru copil,
+pentru bebelus si pentru teen) fiecare avand metoda lui de calculare.
+
+	In annualChildren se gasesc functiile necesare pentru updatare in fiecare
+an, iar lista de copii creata in fiecare an se salveaza in annualChanges urmand
+sa fie afisata la final.
+	
