@@ -101,7 +101,7 @@ public final class Utils {
      * @param array
      * @return
      */
-    public static ArrayList<Gift> convertJSONArrayGift(final JSONArray array) {
+    public static ArrayList<Gift> convertJSONArrayGift(final JSONArray array, HashMap<String, Integer> quantity) {
         if (array != null) {
             ArrayList<Gift> finalArrayGift = new ArrayList<>();
             for (Object object : array) {
@@ -110,7 +110,12 @@ public final class Utils {
                         Double.parseDouble(((JSONObject) object)
                                 .get(Constants.PRICE).toString()),
                         (String) ((JSONObject) object)
-                                .get(Constants.CATEGORY)));
+                                .get(Constants.CATEGORY)
+                        ));
+                quantity.put((String) ((JSONObject) object)
+                        .get(Constants.PRODUCTNAME),
+                        Integer.parseInt(((JSONObject) object).get(Constants.QUANTITY)
+                        .toString()));
             }
             return finalArrayGift;
         } else {
@@ -160,13 +165,15 @@ public final class Utils {
                             Double.parseDouble(((JSONObject) object).get(Constants.NICESCORE)
                                     .toString()),
                             Utils.convertJSONArrayString((JSONArray) ((JSONObject) object)
-                                    .get(Constants.GIFTSPREFERENCES))));
+                                    .get(Constants.GIFTSPREFERENCES)),
+                            (String) ((JSONObject) object).get(Constants.ELF)));
                 } else {
                     childrenUpdates.add(new ChildUpdate(Integer.parseInt(((JSONObject) object)
                             .get(Constants.ID).toString()),
                             -1,
                             Utils.convertJSONArrayString((JSONArray) ((JSONObject) object)
-                                    .get(Constants.GIFTSPREFERENCES))));
+                                    .get(Constants.GIFTSPREFERENCES)),
+                            (String) ((JSONObject) object).get(Constants.ELF)));
                 }
             }
             return childrenUpdates;

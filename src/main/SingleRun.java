@@ -4,10 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import run.Constants;
 import run.DataStore.InputData;
 import run.DataStore.InputLoader;
-import run.InputClass.AnnualChildren;
-import run.InputClass.Child;
-import run.InputClass.Children;
-import run.InputClass.Gift;
+import run.InputClass.*;
+import run.NiceScore;
 import run.Utils;
 
 import java.io.File;
@@ -42,7 +40,7 @@ public final class SingleRun {
      * @throws IOException
      */
     public void runProgram() throws IOException {
-        final int number = 19;
+        final int number = 31;
         Path path = Paths.get(Constants.OUTDIRECTORY);
 
         if (!Files.exists(path)) {
@@ -64,11 +62,20 @@ public final class SingleRun {
      * @param listGift
      */
     public static void calculateData(final Children children, final double santaBudget,
-                                     final HashMap<String, ArrayList<Gift>> listGift) {
+                                     final HashMap<String, ArrayList<Gift>> listGift,
+                                     final HashMap<Integer, Double> listScoreBonus) {
         double sum = 0;
-        double budgetUnit;
+        double budgetUnit, scoreBonus;
         for (Child child : children.getChildren()) {
-            child.calculateAverage();
+            if (listScoreBonus.get(child.getId()) != null) {
+                scoreBonus = listScoreBonus.get(child.getId());
+                NiceScore niceScore = new NiceScore.Builder(child.getAge(),
+                        child.getNiceScoreHistory())
+                        .niceScoreBonus(scoreBonus)
+                        .build();
+                niceScore.calculateAverage();
+                child.setAverageScore(niceScore.getNiceScore());
+            }
             sum += child.getAverageScore();
         }
         budgetUnit = santaBudget / sum;
@@ -89,13 +96,15 @@ public final class SingleRun {
         if (!Files.exists(path)) {
             Files.createFile(path);
         }
+        System.out.println(input);
+        HashMap<Integer, String> listElf = inputData.getListElf();
         List<Object> listGift = (List<Object>) inputData.getDataStore().get(1);
         HashMap<String, ArrayList<Gift>> gifts = Utils.convertObjectGift(listGift);
         Children children = new Children(inputData.getDataStore());
-        calculateData(children, inputData.getSantaBudget(), gifts);
+        calculateData(children, inputData.getSantaBudget(), gifts, inputData.getListScoreBonus());
         AnnualChildren annualChildren = new AnnualChildren(inputData.getNumberOfYears(), children);
         annualChildren.annualUpdate(inputData.getAnnualChanges(), annualChildren,
-                gifts, inputData.getNumberOfYears());
+                gifts, inputData.getNumberOfYears(), inputData.getListScoreBonus());
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             objectMapper.writerWithDefaultPrettyPrinter()

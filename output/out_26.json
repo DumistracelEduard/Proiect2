@@ -1,0 +1,856 @@
+{
+  "annualChildren" : [ {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Popa",
+      "firstName" : "Miruna",
+      "city" : "Timisoara",
+      "age" : 4,
+      "giftsPreferences" : [ "Technology", "Books", "Clothes", "Toys", "Sweets" ],
+      "averageScore" : 10.0,
+      "niceScoreHistory" : [ 7.0 ],
+      "assignedBudget" : 462.36842105263156,
+      "receivedGifts" : [ {
+        "productName" : "Harry Potter",
+        "price" : 35.0,
+        "category" : "Books"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      }, {
+        "productName" : "Castle",
+        "price" : 15.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      } ]
+    }, {
+      "id" : 1,
+      "lastName" : "Stoica",
+      "firstName" : "Alexandra",
+      "city" : "Brasov",
+      "age" : 9,
+      "giftsPreferences" : [ "Toys", "Sweets" ],
+      "averageScore" : 8.0,
+      "niceScoreHistory" : [ 4.0 ],
+      "assignedBudget" : 369.89473684210526,
+      "receivedGifts" : [ {
+        "productName" : "Castle",
+        "price" : 15.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      } ]
+    }, {
+      "id" : 2,
+      "lastName" : "Popescu",
+      "firstName" : "Mihai",
+      "city" : "Braila",
+      "age" : 7,
+      "giftsPreferences" : [ "Sweets", "Toys", "Clothes" ],
+      "averageScore" : 4.8,
+      "niceScoreHistory" : [ 4.0 ],
+      "assignedBudget" : 221.93684210526314,
+      "receivedGifts" : [ {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Castle",
+        "price" : 15.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      } ]
+    }, {
+      "id" : 3,
+      "lastName" : "Stoica",
+      "firstName" : "Maria",
+      "city" : "Craiova",
+      "age" : 11,
+      "giftsPreferences" : [ "Technology" ],
+      "averageScore" : 15.2,
+      "niceScoreHistory" : [ 8.0 ],
+      "assignedBudget" : 702.8,
+      "receivedGifts" : [ {
+        "productName" : "Laptop",
+        "price" : 500.0,
+        "category" : "Technology"
+      } ]
+    } ]
+  }, {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Popa",
+      "firstName" : "Miruna",
+      "city" : "Timisoara",
+      "age" : 5,
+      "giftsPreferences" : [ "Clothes", "Sweets", "Technology", "Books", "Toys" ],
+      "averageScore" : 14.4,
+      "niceScoreHistory" : [ 7.0, 9.0 ],
+      "assignedBudget" : 418.8874172185431,
+      "receivedGifts" : [ {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Harry Potter",
+        "price" : 35.0,
+        "category" : "Books"
+      }, {
+        "productName" : "Castle",
+        "price" : 15.0,
+        "category" : "Toys"
+      } ]
+    }, {
+      "id" : 1,
+      "lastName" : "Stoica",
+      "firstName" : "Alexandra",
+      "city" : "Brasov",
+      "age" : 10,
+      "giftsPreferences" : [ "Toys", "Sweets" ],
+      "averageScore" : 8.0,
+      "niceScoreHistory" : [ 4.0 ],
+      "assignedBudget" : 232.71523178807948,
+      "receivedGifts" : [ {
+        "productName" : "Castle",
+        "price" : 15.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      } ]
+    }, {
+      "id" : 2,
+      "lastName" : "Popescu",
+      "firstName" : "Mihai",
+      "city" : "Braila",
+      "age" : 8,
+      "giftsPreferences" : [ "Toys", "Sweets", "Clothes" ],
+      "averageScore" : 7.8,
+      "niceScoreHistory" : [ 4.0, 9.0 ],
+      "assignedBudget" : 226.89735099337747,
+      "receivedGifts" : [ {
+        "productName" : "Castle",
+        "price" : 15.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      } ]
+    }, {
+      "id" : 3,
+      "lastName" : "Stoica",
+      "firstName" : "Maria",
+      "city" : "Craiova",
+      "age" : 12,
+      "giftsPreferences" : [ "Sweets", "Books", "Clothes", "Technology" ],
+      "averageScore" : 15.2,
+      "niceScoreHistory" : [ 8.0 ],
+      "assignedBudget" : 442.158940397351,
+      "receivedGifts" : [ {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Harry Potter",
+        "price" : 35.0,
+        "category" : "Books"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      } ]
+    }, {
+      "id" : 4,
+      "lastName" : "Ionescu",
+      "firstName" : "Tudor",
+      "city" : "Iasi",
+      "age" : 9,
+      "giftsPreferences" : [ "Toys", "Clothes" ],
+      "averageScore" : 7.0,
+      "niceScoreHistory" : [ 7.0 ],
+      "assignedBudget" : 203.62582781456953,
+      "receivedGifts" : [ {
+        "productName" : "Castle",
+        "price" : 15.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      } ]
+    }, {
+      "id" : 5,
+      "lastName" : "Popescu",
+      "firstName" : "Tudor",
+      "city" : "Oradea",
+      "age" : 13,
+      "giftsPreferences" : [ "Clothes" ],
+      "averageScore" : 8.0,
+      "niceScoreHistory" : [ 8.0 ],
+      "assignedBudget" : 232.71523178807948,
+      "receivedGifts" : [ {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      } ]
+    } ]
+  }, {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Popa",
+      "firstName" : "Miruna",
+      "city" : "Timisoara",
+      "age" : 6,
+      "giftsPreferences" : [ "Clothes", "Sweets", "Technology", "Books", "Toys" ],
+      "averageScore" : 9.6,
+      "niceScoreHistory" : [ 7.0, 9.0, 0.0 ],
+      "assignedBudget" : 82.76074406670942,
+      "receivedGifts" : [ {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Castle",
+        "price" : 15.0,
+        "category" : "Toys"
+      } ]
+    }, {
+      "id" : 1,
+      "lastName" : "Stoica",
+      "firstName" : "Alexandra",
+      "city" : "Brasov",
+      "age" : 11,
+      "giftsPreferences" : [ "Sweets", "Technology", "Toys", "Clothes" ],
+      "averageScore" : 10.0,
+      "niceScoreHistory" : [ 4.0, 6.0 ],
+      "assignedBudget" : 86.20910840282232,
+      "receivedGifts" : [ {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Castle",
+        "price" : 15.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      } ]
+    }, {
+      "id" : 2,
+      "lastName" : "Popescu",
+      "firstName" : "Mihai",
+      "city" : "Braila",
+      "age" : 9,
+      "giftsPreferences" : [ "Technology", "Toys", "Sweets", "Clothes" ],
+      "averageScore" : 7.8,
+      "niceScoreHistory" : [ 4.0, 9.0 ],
+      "assignedBudget" : 67.24310455420141,
+      "receivedGifts" : [ {
+        "productName" : "Castle",
+        "price" : 15.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      } ]
+    }, {
+      "id" : 3,
+      "lastName" : "Stoica",
+      "firstName" : "Maria",
+      "city" : "Craiova",
+      "age" : 13,
+      "giftsPreferences" : [ "Clothes", "Sweets", "Books", "Technology" ],
+      "averageScore" : 11.4,
+      "niceScoreHistory" : [ 8.0, 5.0 ],
+      "assignedBudget" : 98.27838357921745,
+      "receivedGifts" : [ {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Harry Potter",
+        "price" : 35.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 4,
+      "lastName" : "Ionescu",
+      "firstName" : "Tudor",
+      "city" : "Iasi",
+      "age" : 10,
+      "giftsPreferences" : [ "Toys", "Clothes" ],
+      "averageScore" : 4.5,
+      "niceScoreHistory" : [ 7.0, 2.0 ],
+      "assignedBudget" : 38.794098781270044,
+      "receivedGifts" : [ {
+        "productName" : "Castle",
+        "price" : 15.0,
+        "category" : "Toys"
+      } ]
+    }, {
+      "id" : 5,
+      "lastName" : "Popescu",
+      "firstName" : "Tudor",
+      "city" : "Oradea",
+      "age" : 14,
+      "giftsPreferences" : [ "Clothes", "Toys", "Sweets" ],
+      "averageScore" : 8.666666666666666,
+      "niceScoreHistory" : [ 8.0, 9.0 ],
+      "assignedBudget" : 74.71456061577933,
+      "receivedGifts" : [ {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      }, {
+        "productName" : "Castle",
+        "price" : 15.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      } ]
+    } ]
+  }, {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Popa",
+      "firstName" : "Miruna",
+      "city" : "Timisoara",
+      "age" : 7,
+      "giftsPreferences" : [ "Technology", "Clothes", "Sweets", "Books", "Toys" ],
+      "averageScore" : 9.6,
+      "niceScoreHistory" : [ 7.0, 9.0, 0.0 ],
+      "assignedBudget" : 462.96065873741986,
+      "receivedGifts" : [ {
+        "productName" : "Headphones",
+        "price" : 100.0,
+        "category" : "Technology"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Harry Potter",
+        "price" : 35.0,
+        "category" : "Books"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      } ]
+    }, {
+      "id" : 1,
+      "lastName" : "Stoica",
+      "firstName" : "Alexandra",
+      "city" : "Brasov",
+      "age" : 12,
+      "giftsPreferences" : [ "Toys", "Technology", "Sweets", "Clothes" ],
+      "averageScore" : 11.333333333333336,
+      "niceScoreHistory" : [ 4.0, 6.0, 6.0 ],
+      "assignedBudget" : 546.5507776761208,
+      "receivedGifts" : [ {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Headphones",
+        "price" : 100.0,
+        "category" : "Technology"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      } ]
+    }, {
+      "id" : 2,
+      "lastName" : "Popescu",
+      "firstName" : "Mihai",
+      "city" : "Braila",
+      "age" : 10,
+      "giftsPreferences" : [ "Books", "Sweets", "Technology", "Toys", "Clothes" ],
+      "averageScore" : 7.8,
+      "niceScoreHistory" : [ 4.0, 9.0 ],
+      "assignedBudget" : 376.15553522415365,
+      "receivedGifts" : [ {
+        "productName" : "Harry Potter",
+        "price" : 35.0,
+        "category" : "Books"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Headphones",
+        "price" : 100.0,
+        "category" : "Technology"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      } ]
+    }, {
+      "id" : 3,
+      "lastName" : "Stoica",
+      "firstName" : "Maria",
+      "city" : "Craiova",
+      "age" : 14,
+      "giftsPreferences" : [ "Clothes", "Toys", "Sweets", "Books", "Technology" ],
+      "averageScore" : 5.7,
+      "niceScoreHistory" : [ 8.0, 5.0, 0.0 ],
+      "assignedBudget" : 274.88289112534306,
+      "receivedGifts" : [ {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Harry Potter",
+        "price" : 35.0,
+        "category" : "Books"
+      }, {
+        "productName" : "Headphones",
+        "price" : 100.0,
+        "category" : "Technology"
+      } ]
+    }, {
+      "id" : 4,
+      "lastName" : "Ionescu",
+      "firstName" : "Tudor",
+      "city" : "Iasi",
+      "age" : 11,
+      "giftsPreferences" : [ "Clothes", "Toys", "Sweets" ],
+      "averageScore" : 0.0,
+      "niceScoreHistory" : [ 7.0, 2.0 ],
+      "assignedBudget" : 0.0,
+      "receivedGifts" : [ ]
+    }, {
+      "id" : 5,
+      "lastName" : "Popescu",
+      "firstName" : "Tudor",
+      "city" : "Oradea",
+      "age" : 15,
+      "giftsPreferences" : [ "Toys", "Clothes", "Sweets" ],
+      "averageScore" : 0.0,
+      "niceScoreHistory" : [ 8.0, 9.0 ],
+      "assignedBudget" : 0.0,
+      "receivedGifts" : [ ]
+    }, {
+      "id" : 6,
+      "lastName" : "Stoica",
+      "firstName" : "Tudor",
+      "city" : "Cluj-Napoca",
+      "age" : 16,
+      "giftsPreferences" : [ "Toys", "Sweets" ],
+      "averageScore" : 2.0,
+      "niceScoreHistory" : [ 2.0 ],
+      "assignedBudget" : 96.45013723696248,
+      "receivedGifts" : [ {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      } ]
+    } ]
+  }, {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Popa",
+      "firstName" : "Miruna",
+      "city" : "Timisoara",
+      "age" : 8,
+      "giftsPreferences" : [ "Technology", "Clothes", "Sweets", "Books", "Toys" ],
+      "averageScore" : 10.8,
+      "niceScoreHistory" : [ 7.0, 9.0, 0.0, 8.0 ],
+      "assignedBudget" : 188.24581005586592,
+      "receivedGifts" : [ {
+        "productName" : "Headphones",
+        "price" : 100.0,
+        "category" : "Technology"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      } ]
+    }, {
+      "id" : 1,
+      "lastName" : "Stoica",
+      "firstName" : "Alexandra",
+      "city" : "Brasov",
+      "age" : 13,
+      "giftsPreferences" : [ "Toys", "Technology", "Sweets", "Clothes" ],
+      "averageScore" : 11.333333333333336,
+      "niceScoreHistory" : [ 4.0, 6.0, 6.0 ],
+      "assignedBudget" : 197.5418994413408,
+      "receivedGifts" : [ {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Headphones",
+        "price" : 100.0,
+        "category" : "Technology"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      } ]
+    }, {
+      "id" : 2,
+      "lastName" : "Popescu",
+      "firstName" : "Mihai",
+      "city" : "Braila",
+      "age" : 11,
+      "giftsPreferences" : [ "Books", "Sweets", "Technology", "Toys", "Clothes" ],
+      "averageScore" : 6.3999999999999995,
+      "niceScoreHistory" : [ 4.0, 9.0, 3.0 ],
+      "assignedBudget" : 111.5530726256983,
+      "receivedGifts" : [ {
+        "productName" : "Harry Potter",
+        "price" : 35.0,
+        "category" : "Books"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      } ]
+    }, {
+      "id" : 3,
+      "lastName" : "Stoica",
+      "firstName" : "Maria",
+      "city" : "Craiova",
+      "age" : 15,
+      "giftsPreferences" : [ "Technology", "Sweets", "Clothes", "Toys", "Books" ],
+      "averageScore" : 5.7,
+      "niceScoreHistory" : [ 8.0, 5.0, 0.0 ],
+      "assignedBudget" : 99.35195530726257,
+      "receivedGifts" : [ {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      } ]
+    }, {
+      "id" : 4,
+      "lastName" : "Ionescu",
+      "firstName" : "Tudor",
+      "city" : "Iasi",
+      "age" : 12,
+      "giftsPreferences" : [ "Books", "Technology", "Clothes", "Toys", "Sweets" ],
+      "averageScore" : 3.8333333333333335,
+      "niceScoreHistory" : [ 7.0, 2.0, 4.0 ],
+      "assignedBudget" : 66.81564245810056,
+      "receivedGifts" : [ {
+        "productName" : "Harry Potter",
+        "price" : 35.0,
+        "category" : "Books"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      } ]
+    }, {
+      "id" : 5,
+      "lastName" : "Popescu",
+      "firstName" : "Tudor",
+      "city" : "Oradea",
+      "age" : 16,
+      "giftsPreferences" : [ "Technology", "Toys", "Clothes", "Sweets" ],
+      "averageScore" : 0.0,
+      "niceScoreHistory" : [ 8.0, 9.0 ],
+      "assignedBudget" : 0.0,
+      "receivedGifts" : [ ]
+    }, {
+      "id" : 6,
+      "lastName" : "Stoica",
+      "firstName" : "Tudor",
+      "city" : "Cluj-Napoca",
+      "age" : 17,
+      "giftsPreferences" : [ "Toys", "Sweets" ],
+      "averageScore" : 6.666666666666667,
+      "niceScoreHistory" : [ 2.0, 9.0 ],
+      "assignedBudget" : 116.20111731843575,
+      "receivedGifts" : [ {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      } ]
+    }, {
+      "id" : 8,
+      "lastName" : "Ionescu",
+      "firstName" : "Miruna",
+      "city" : "Timisoara",
+      "age" : 2,
+      "giftsPreferences" : [ "Toys" ],
+      "averageScore" : 3.0,
+      "niceScoreHistory" : [ 3.0 ],
+      "assignedBudget" : 52.290502793296085,
+      "receivedGifts" : [ {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      } ]
+    } ]
+  }, {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Popa",
+      "firstName" : "Miruna",
+      "city" : "Timisoara",
+      "age" : 9,
+      "giftsPreferences" : [ "Technology", "Clothes", "Sweets", "Books", "Toys" ],
+      "averageScore" : 10.08,
+      "niceScoreHistory" : [ 7.0, 9.0, 0.0, 8.0, 4.0 ],
+      "assignedBudget" : 177.7964505613908,
+      "receivedGifts" : [ {
+        "productName" : "Headphones",
+        "price" : 100.0,
+        "category" : "Technology"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      } ]
+    }, {
+      "id" : 1,
+      "lastName" : "Stoica",
+      "firstName" : "Alexandra",
+      "city" : "Brasov",
+      "age" : 14,
+      "giftsPreferences" : [ "Books", "Toys", "Technology", "Sweets", "Clothes" ],
+      "averageScore" : 11.333333333333336,
+      "niceScoreHistory" : [ 4.0, 6.0, 6.0 ],
+      "assignedBudget" : 199.9034166364844,
+      "receivedGifts" : [ {
+        "productName" : "Harry Potter",
+        "price" : 35.0,
+        "category" : "Books"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Headphones",
+        "price" : 100.0,
+        "category" : "Technology"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      } ]
+    }, {
+      "id" : 2,
+      "lastName" : "Popescu",
+      "firstName" : "Mihai",
+      "city" : "Braila",
+      "age" : 12,
+      "giftsPreferences" : [ "Clothes", "Books", "Sweets", "Technology", "Toys" ],
+      "averageScore" : 6.2,
+      "niceScoreHistory" : [ 4.0, 9.0, 3.0 ],
+      "assignedBudget" : 109.35892792466497,
+      "receivedGifts" : [ {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      }, {
+        "productName" : "Harry Potter",
+        "price" : 35.0,
+        "category" : "Books"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      } ]
+    }, {
+      "id" : 3,
+      "lastName" : "Stoica",
+      "firstName" : "Maria",
+      "city" : "Craiova",
+      "age" : 16,
+      "giftsPreferences" : [ "Toys", "Sweets", "Technology", "Clothes", "Books" ],
+      "averageScore" : 4.9399999999999995,
+      "niceScoreHistory" : [ 8.0, 5.0, 0.0, 2.0 ],
+      "assignedBudget" : 87.13437160449111,
+      "receivedGifts" : [ {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      } ]
+    }, {
+      "id" : 4,
+      "lastName" : "Ionescu",
+      "firstName" : "Tudor",
+      "city" : "Iasi",
+      "age" : 13,
+      "giftsPreferences" : [ "Toys", "Books", "Technology", "Clothes", "Sweets" ],
+      "averageScore" : 0.0,
+      "niceScoreHistory" : [ 7.0, 2.0, 4.0 ],
+      "assignedBudget" : 0.0,
+      "receivedGifts" : [ ]
+    }, {
+      "id" : 5,
+      "lastName" : "Popescu",
+      "firstName" : "Tudor",
+      "city" : "Oradea",
+      "age" : 17,
+      "giftsPreferences" : [ "Technology", "Toys", "Clothes", "Sweets" ],
+      "averageScore" : 8.833333333333334,
+      "niceScoreHistory" : [ 8.0, 9.0, 9.0 ],
+      "assignedBudget" : 155.80707473137753,
+      "receivedGifts" : [ {
+        "productName" : "Headphones",
+        "price" : 100.0,
+        "category" : "Technology"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      } ]
+    }, {
+      "id" : 6,
+      "lastName" : "Stoica",
+      "firstName" : "Tudor",
+      "city" : "Cluj-Napoca",
+      "age" : 18,
+      "giftsPreferences" : [ "Toys", "Sweets" ],
+      "averageScore" : 3.8333333333333335,
+      "niceScoreHistory" : [ 2.0, 9.0, 1.0 ],
+      "assignedBudget" : 67.61439092116383,
+      "receivedGifts" : [ {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      } ]
+    }, {
+      "id" : 8,
+      "lastName" : "Ionescu",
+      "firstName" : "Miruna",
+      "city" : "Timisoara",
+      "age" : 3,
+      "giftsPreferences" : [ "Toys" ],
+      "averageScore" : 10.0,
+      "niceScoreHistory" : [ 3.0, 1.0 ],
+      "assignedBudget" : 176.38536762042736,
+      "receivedGifts" : [ {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      } ]
+    } ]
+  } ]
+}

@@ -7,6 +7,7 @@ public class AnnualChanges {
     private final List<Gift> giftList;
     private final List<Child> newChildren;
     private final List<ChildUpdate> childrenUpdates;
+    private final String strategy;
 
     /**
      * constructor
@@ -16,11 +17,13 @@ public class AnnualChanges {
      * @param childrenUpdates
      */
     public AnnualChanges(final double newSantaBudget, final List<Gift> giftList,
-                         final List<Child> newChildren, final List<ChildUpdate> childrenUpdates) {
+                         final List<Child> newChildren, final List<ChildUpdate> childrenUpdates,
+                         final String strategy) {
         this.newSantaBudget = newSantaBudget;
         this.giftList = giftList;
         this.newChildren = newChildren;
         this.childrenUpdates = childrenUpdates;
+        this.strategy = strategy;
     }
 
     public final double getNewSantaBudget() {
@@ -37,6 +40,10 @@ public class AnnualChanges {
 
     public final List<ChildUpdate> getChildrenUpdates() {
         return childrenUpdates;
+    }
+
+    public final String getStrategy() {
+        return strategy;
     }
 
     @Override

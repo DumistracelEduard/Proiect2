@@ -116,6 +116,7 @@ public class Child {
             calculateAverage();
         }
     }
+
     public final Integer getId() {
         return id;
     }

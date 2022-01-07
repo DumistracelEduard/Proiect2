@@ -95,18 +95,17 @@ public final class AnnualChildren {
     public void annualUpdate(final List<AnnualChanges> annualChanges,
                              final AnnualChildren children,
                              final HashMap<String, ArrayList<Gift>> listGift,
-                             final int numberOfYears) {
+                             final int numberOfYears,
+                             final HashMap<Integer, Double> listScoreBonus) {
         double santaBudget;
         for (int i = 0; i < numberOfYears; ++i) {
             santaBudget = annualChanges.get(i).getNewSantaBudget();
 
             Children children1 = new Children(children.getAnnualChildren().get(i));
-
             updateGift(listGift, annualChanges.get(i).getGiftList());
             updateChild(children1, annualChanges.get(i).getNewChildren());
             updateDataChild(annualChanges.get(i).getChildrenUpdates(), children1);
-            calculateData(children1, santaBudget, listGift);
-
+            calculateData(children1, santaBudget, listGift, listScoreBonus);
             children.getAnnualChildren().add(children1);
         }
     }

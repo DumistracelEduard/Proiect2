@@ -27,4 +27,8 @@ public final class Constants {
     public static final String NEWGIFTS = "newGifts";
     public static final String NEWCHILDREN = "newChildren";
     public static final String CHILDRENUPDATES = "childrenUpdates";
+    public static final String NICESCOREBONUS = "niceScoreBonus";
+    public static final String ELF = "elf";
+    public static final String QUANTITY = "quantity";
+    public static final String STRATEGY = "strategy";
 }

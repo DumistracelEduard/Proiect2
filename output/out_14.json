@@ -108,7 +108,7 @@
       "giftsPreferences" : [ "Toys", "Books", "Technology", "Clothes", "Board Games" ],
       "averageScore" : 10.0,
       "niceScoreHistory" : [ 4.0, 3.0, 9.0 ],
-      "assignedBudget" : 324.6153846153846,
+      "assignedBudget" : 506.4,
       "receivedGifts" : [ {
         "productName" : "Teddy Bear",
         "price" : 5.0,
@@ -135,7 +135,7 @@
       "giftsPreferences" : [ "Clothes", "Toys", "Technology" ],
       "averageScore" : 2.5,
       "niceScoreHistory" : [ 7.0, 1.0, 2.0 ],
-      "assignedBudget" : 81.15384615384615,
+      "assignedBudget" : 126.6,
       "receivedGifts" : [ {
         "productName" : "Dress",
         "price" : 45.0,
@@ -152,22 +152,10 @@
       "city" : "Brasov",
       "age" : 11,
       "giftsPreferences" : [ "Board Games", "Toys", "Books" ],
-      "averageScore" : 7.0,
+      "averageScore" : 0.0,
       "niceScoreHistory" : [ 7.0 ],
-      "assignedBudget" : 227.23076923076923,
-      "receivedGifts" : [ {
-        "productName" : "Puzzle",
-        "price" : 50.0,
-        "category" : "Board Games"
-      }, {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys"
-      }, {
-        "productName" : "Harry Potter",
-        "price" : 35.0,
-        "category" : "Books"
-      } ]
+      "assignedBudget" : 0.0,
+      "receivedGifts" : [ ]
     } ]
   }, {
     "children" : [ {

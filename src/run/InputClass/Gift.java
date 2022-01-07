@@ -5,7 +5,6 @@ public class Gift {
     private final double price;
     private final String category;
 
-
     public Gift(final String productName, final double price,
                 final String category) {
         this.productName = productName;
@@ -24,4 +23,5 @@ public class Gift {
     public final String getCategory() {
         return category;
     }
+
 }
