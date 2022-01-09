@@ -39,7 +39,6 @@ public class WitchCity {
             }
         };
         listCity.sort(comparator);
-        System.out.println(listCity.toString());
         return listCity;
     }
 }

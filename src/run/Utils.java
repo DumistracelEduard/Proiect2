@@ -82,7 +82,7 @@ public final class Utils {
      * @param array
      * @return
      */
-    public static ArrayList<Gift> convertJSONArrayGift(final JSONArray array, HashMap<String, Integer> quantity) {
+    public static ArrayList<Gift> convertJSONArrayGift(final JSONArray array, HashMap<String, Integer> quantity, int i, List<HashMap<String, Integer>> quantityYear) {
         if (array != null) {
             ArrayList<Gift> finalArrayGift = new ArrayList<>();
             for (Object object : array) {
@@ -92,10 +92,20 @@ public final class Utils {
                                 .get(Constants.PRICE).toString()),
                         (String) ((JSONObject) object)
                                 .get(Constants.CATEGORY)));
-                quantity.put((String) ((JSONObject) object)
-                        .get(Constants.PRODUCTNAME),
-                        Integer.parseInt(((JSONObject) object).get(Constants.QUANTITY)
-                        .toString()));
+                if (quantity.containsKey((String) ((JSONObject) object)
+                        .get(Constants.PRODUCTNAME))) {
+                    String name = (String) ((JSONObject) object)
+                            .get(Constants.PRODUCTNAME);
+                    Integer quantityProduct = quantity.get(name);
+                    quantityProduct += Integer.parseInt(((JSONObject) object).get(Constants.QUANTITY)
+                            .toString());
+                    quantity.put(name, quantityProduct);
+                } else {
+                    quantity.put((String) ((JSONObject) object)
+                                    .get(Constants.PRODUCTNAME),
+                            Integer.parseInt(((JSONObject) object).get(Constants.QUANTITY)
+                                    .toString()));
+                }
             }
             return finalArrayGift;
         } else {

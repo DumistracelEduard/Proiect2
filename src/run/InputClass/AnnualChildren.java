@@ -106,7 +106,7 @@ public final class AnnualChildren {
                              final int numberOfYears,
                              final HashMap<Integer, Double> listScoreBonus,
                              final HashMap<Integer, String> elf,
-                             final HashMap<String, Integer> quantity) {
+                             final List<HashMap<String, Integer>> quantityYear) {
         double santaBudget;
         for (int i = 0; i < numberOfYears; ++i) {
             santaBudget = annualChanges.get(i).getNewSantaBudget();
@@ -114,9 +114,9 @@ public final class AnnualChildren {
             updateGift(listGift, annualChanges.get(i).getGiftList());
             updateChild(children1, annualChanges.get(i).getNewChildren());
             updateDataChild(annualChanges.get(i).getChildrenUpdates(), children1, elf);
-            calculateData(children1, santaBudget, listGift, listScoreBonus, elf, annualChanges.get(i), quantity, 1);
+            calculateData(children1, santaBudget, listGift, listScoreBonus, elf, annualChanges.get(i), quantityYear.get(i + 1), 1, quantityYear);
             for (Child child: children1.getChildren()) {
-                Yellow.YellowRun(child, elf.get(child.getId()), listGift, quantity);
+                Yellow.YellowRun(child, elf.get(child.getId()), listGift, quantityYear.get(i), quantityYear);
             }
             children.getAnnualChildren().add(children1);
         }

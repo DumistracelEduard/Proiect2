@@ -42,6 +42,7 @@ public final class InputLoader {
         HashMap<Integer, Double> listScoreBonus = new HashMap<>();
         HashMap<Integer, String> listElf = new HashMap<>();
         HashMap<String, Integer> quantity = new HashMap<>();
+        List<HashMap<String, Integer>> quantityYear = new ArrayList<>();
 
         try {
             JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader(inputPath));
@@ -93,22 +94,30 @@ public final class InputLoader {
                                 .get(Constants.PRODUCTNAME), Integer.parseInt(((JSONObject) jsonGift).get(Constants.QUANTITY).toString()));
                     }
                 }
+                quantityYear.add(0, quantity);
             } else {
                 System.out.println("Nu exista date initiale");
             }
             if (jsonChangesAnnual != null) {
+                int i = 0;
                 for (Object jsonChange : jsonChangesAnnual) {
+                    HashMap<String, Integer> newQuantity = new HashMap<>();
+                    for (String product: quantityYear.get(i).keySet()) {
+                        newQuantity.put(product, quantityYear.get(i).get(product));
+                    }
                     annualChanges.add(
                             new AnnualChanges(Double.parseDouble(((JSONObject) jsonChange)
                                     .get(Constants.NEWSANTABUDGET).toString()),
                             Utils.convertJSONArrayGift((JSONArray) ((JSONObject) jsonChange)
-                                    .get(Constants.NEWGIFTS), quantity),
+                                    .get(Constants.NEWGIFTS), newQuantity, i, quantityYear),
                             Utils.convertJSONArrayChildren((JSONArray) ((JSONObject) jsonChange)
                                     .get(Constants.NEWCHILDREN), listElf, listScoreBonus),
                             Utils.convertJSONArrayChildUpdate((JSONArray) ((JSONObject) jsonChange)
                                     .get(Constants.CHILDRENUPDATES)),
                                     (String) ((JSONObject) jsonChange).get(Constants.STRATEGY)
                             ));
+                    ++i;
+                    quantityYear.add(newQuantity);
                 }
             } else {
                 System.out.println("Nu exista schimbari anuale");
@@ -118,6 +127,6 @@ public final class InputLoader {
         }
 
         return new InputData(numberOfYears, santaBudget, childList,
-                giftList, cityList, annualChanges, listScoreBonus, listElf, quantity);
+                giftList, cityList, annualChanges, listScoreBonus, listElf, quantityYear);
     }
 }

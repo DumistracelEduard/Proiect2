@@ -67,7 +67,7 @@ public final class SingleRun {
                                      final HashMap<Integer, String> elf,
                                      final AnnualChanges annualChanges,
                                      final HashMap<String, Integer> quantity,
-                                     final Integer year) {
+                                     final Integer year, List<HashMap<String, Integer>> quantityYear) {
         double sum = 0;
         double budgetUnit, scoreBonus;
         for (Child child : children.getChildren()) {
@@ -81,7 +81,7 @@ public final class SingleRun {
             sum += child.getAverageScore();
         }
         budgetUnit = santaBudget / sum;
-        GiftDistribution.witchStrategy(children, listGift, annualChanges, quantity, elf, budgetUnit, year);
+        GiftDistribution.witchStrategy(children, listGift, annualChanges, quantity, elf, budgetUnit, year, quantityYear);
     }
 
     /**
@@ -99,13 +99,18 @@ public final class SingleRun {
             Files.createFile(path);
         }
         System.out.println(input);
-
+        for (int i = 0; i < inputData.getQuantity().size(); ++i) {
+            System.out.println(i);
+            for (String name: inputData.getQuantity().get(i).keySet()) {
+                System.out.println(name + " " + inputData.getQuantity().get(i).get(name));
+            }
+        }
         HashMap<Integer, String> listElf = inputData.getListElf();
         List<Object> listGift = (List<Object>) inputData.getDataStore().get(1);
         HashMap<String, ArrayList<Gift>> gifts = Utils.convertObjectGift(listGift);
 
         Children children = new Children(inputData.getDataStore());
-        calculateData(children, inputData.getSantaBudget(), gifts, inputData.getListScoreBonus(), listElf, inputData.getAnnualChanges().get(0), inputData.getQuantity(), 0);
+        calculateData(children, inputData.getSantaBudget(), gifts, inputData.getListScoreBonus(), listElf, inputData.getAnnualChanges().get(0), inputData.getQuantity().get(0), 0, inputData.getQuantity());
         Collections.sort(children.getChildren(), new Comparator<Child>() {
             @Override
             public int compare(Child o1, Child o2) {

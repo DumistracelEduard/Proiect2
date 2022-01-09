@@ -15,7 +15,8 @@ public class InputData {
     private final List<AnnualChanges> annualChanges;
     private final HashMap<Integer, Double> listScoreBonus;
     private final HashMap<Integer, String> listElf;
-    private final HashMap<String, Integer> quantity;
+    private final List<HashMap<String, Integer>> quantity;
+
 
     /**
      * constructor
@@ -31,7 +32,7 @@ public class InputData {
                      final List<String> cityList, final List<AnnualChanges> annualChanges,
                      final HashMap<Integer, Double> listScoreBonus,
                      final HashMap<Integer, String> listElf,
-                     final HashMap<String, Integer> quantity) {
+                     final List<HashMap<String, Integer>> quantity) {
         this.numberOfYears = numberOfYears;
         this.santaBudget = santaBudget;
         this.dataStore.add(childList);
@@ -67,7 +68,7 @@ public class InputData {
         return listElf;
     }
 
-    public HashMap<String, Integer> getQuantity() {
+    public List<HashMap<String, Integer>> getQuantity() {
         return quantity;
     }
 }
