@@ -16,7 +16,7 @@ public final class NiceScore {
     public static final class Builder {
         private Integer age;
         private List<Double> niceScoreHistory;
-        private double niceScoreBonus;
+        private double niceScoreBonus = 0;
 
         public Builder(final Integer age, final List<Double> niceScoreHistory) {
             this.age = age;

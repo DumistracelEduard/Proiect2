@@ -20,9 +20,19 @@ public final class Children {
 
     public Children(final List<Object> dataStore) {
         this.children = Utils.convertObject((List<Object>) dataStore.get(0));
+        for (Child child: children) {
+            child.checkPreferences();
+        }
     }
 
     public List<Child> getChildren() {
         return children;
+    }
+
+    @Override
+    public String toString() {
+        return "Children{" +
+                "children=" + children +
+                '}';
     }
 }

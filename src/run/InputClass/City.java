@@ -29,15 +29,8 @@ public class City {
                 return Integer.compare(o1.getId(), o2.getId());
             }
         });
-    }
-
-    public void calculateScore() {
-        if (niceScores.size() == 0) {
-            this.score = 0;
-            return;
-        }
-        double sum = 0;
-        for(Double score: niceScores) {
+        double sum =0;
+        for (Double score: niceScores) {
             sum += score;
         }
         this.score = sum / niceScores.size();
@@ -57,5 +50,15 @@ public class City {
 
     public ArrayList<Child> getChildren() {
         return children;
+    }
+
+    @Override
+    public String toString() {
+        return "City{" +
+                "score=" + score +
+                ", name='" + name + '\'' +
+                ", niceScores=" + niceScores +
+                ", children=" + children +
+                "}\n";
     }
 }

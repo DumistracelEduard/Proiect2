@@ -2,7 +2,6 @@ package run;
 
 import run.InputClass.*;
 import run.elf.RunBlackOrPink;
-import run.elf.WitchPinkBlack;
 
 import java.util.*;
 
@@ -73,7 +72,7 @@ public class GiftDistribution {
 
     public static void witchStrategy(final Children children, HashMap<String, ArrayList<Gift>> gifts,
                               AnnualChanges annualChanges, HashMap<String, Integer> quantity,
-                              final HashMap<Integer, String> elf, final double budgetUnit,Integer year){
+                              final HashMap<Integer, String> elf, final double budgetUnit,Integer year) {
         for (Child child : children.getChildren()) {
             child.calculateBudget(budgetUnit);
             RunBlackOrPink.run(child, elf);
@@ -101,6 +100,7 @@ public class GiftDistribution {
                                     quantity.put(gift.getProductName(), quantityProduct);
                                     child.getReceivedGifts().add(gift);
                                     buget -= gift.getPrice();
+                                    break;
                                 }
                             }
                         }

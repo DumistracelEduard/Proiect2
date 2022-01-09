@@ -104,7 +104,7 @@ public final class InputLoader {
                             Utils.convertJSONArrayGift((JSONArray) ((JSONObject) jsonChange)
                                     .get(Constants.NEWGIFTS), quantity),
                             Utils.convertJSONArrayChildren((JSONArray) ((JSONObject) jsonChange)
-                                    .get(Constants.NEWCHILDREN)),
+                                    .get(Constants.NEWCHILDREN), listElf, listScoreBonus),
                             Utils.convertJSONArrayChildUpdate((JSONArray) ((JSONObject) jsonChange)
                                     .get(Constants.CHILDRENUPDATES)),
                                     (String) ((JSONObject) jsonChange).get(Constants.STRATEGY)

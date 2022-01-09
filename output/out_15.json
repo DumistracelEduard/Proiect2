@@ -6,15 +6,11 @@
       "firstName" : "Radu",
       "city" : "Constanta",
       "age" : 5,
-      "giftsPreferences" : [ "Books", "Books", "Clothes", "Toys" ],
+      "giftsPreferences" : [ "Books", "Clothes", "Toys" ],
       "averageScore" : 10.0,
       "niceScoreHistory" : [ 8.0 ],
       "assignedBudget" : 207.5,
       "receivedGifts" : [ {
-        "productName" : "Diary of a Wimpy Kid",
-        "price" : 25.0,
-        "category" : "Books"
-      }, {
         "productName" : "Diary of a Wimpy Kid",
         "price" : 25.0,
         "category" : "Books"

@@ -8,6 +8,7 @@ import run.GiftDistribution;
 import run.InputClass.*;
 import run.NiceScore;
 import run.Utils;
+import run.elf.RunBlackOrPink;
 
 import java.io.File;
 import java.io.IOException;
@@ -70,15 +71,13 @@ public final class SingleRun {
         double sum = 0;
         double budgetUnit, scoreBonus;
         for (Child child : children.getChildren()) {
-            if (listScoreBonus.get(child.getId()) != null) {
-                scoreBonus = listScoreBonus.get(child.getId());
-                NiceScore niceScore = new NiceScore.Builder(child.getAge(),
-                        child.getNiceScoreHistory())
-                        .niceScoreBonus(scoreBonus)
-                        .build();
-                niceScore.calculateAverage();
-                child.setAverageScore(niceScore.getNiceScore());
-            }
+            scoreBonus = listScoreBonus.get(child.getId());
+            NiceScore niceScore = new NiceScore.Builder(child.getAge(),
+                    child.getNiceScoreHistory())
+                    .niceScoreBonus(scoreBonus)
+                    .build();
+            niceScore.calculateAverage();
+            child.setAverageScore(niceScore.getNiceScore());
             sum += child.getAverageScore();
         }
         budgetUnit = santaBudget / sum;

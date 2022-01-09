@@ -18,28 +18,6 @@ public final class Utils {
     private Utils() { }
 
     /**
-     * distribuirea cadourilor pentru fiecare buget
-     * @param budgetUnit
-     * @param children
-     * @param listGift
-     */
-    public static void distributionGift(final double budgetUnit, final Children children,
-                                        final HashMap<String, ArrayList<Gift>> listGift,
-                                        final HashMap<Integer, String> elf) {
-        for (Child child : children.getChildren()) {
-            double buget = child.calculateBudget(budgetUnit);
-            RunBlackOrPink.run(child, elf);
-            for (String giftPreference : child.getGiftsPreferences()) {
-                if (listGift.get(giftPreference) != null
-                        && buget - listGift.get(giftPreference).get(0).getPrice() > 0.0) {
-                    buget -= listGift.get(giftPreference).get(0).getPrice();
-                    child.getReceivedGifts().add(listGift.get(giftPreference).get(0));
-                }
-            }
-        }
-    }
-
-    /**
      * convert lista de object pentru cadouri in hashmap de liste
      * fiecare lista fiin in ordine desc a preturilor
      * @param array
@@ -130,7 +108,8 @@ public final class Utils {
      * @param array
      * @return
      */
-    public static ArrayList<Child> convertJSONArrayChildren(final JSONArray array) {
+    public static ArrayList<Child> convertJSONArrayChildren(final JSONArray array, final HashMap<Integer, String> elf,
+                                                            final HashMap<Integer, Double> listScoreBonus) {
         if (array != null) {
             ArrayList<Child> newChildrenList = new ArrayList<>();
             for (Object object : array) {
@@ -145,6 +124,14 @@ public final class Utils {
                                 .get(Constants.GIFTSPREFERENCES)),
                         Double.parseDouble(((JSONObject) object).get(Constants.NICESCORE)
                                 .toString())));
+                if ((String) ((JSONObject) object).get(Constants.ELF) != null) {
+                    elf.put(Integer.parseInt(((JSONObject) object)
+                            .get(Constants.ID).toString()), (String) ((JSONObject) object).get(Constants.ELF));
+                }
+                listScoreBonus.put(Integer.parseInt(((JSONObject) object)
+                                    .get(Constants.ID).toString()),
+                            Double.parseDouble(((JSONObject) object)
+                                    .get(Constants.NICESCOREBONUS).toString()));
             }
             return newChildrenList;
         } else {

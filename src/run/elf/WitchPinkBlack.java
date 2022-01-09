@@ -9,6 +9,9 @@ public class WitchPinkBlack {
         if(elf.get(child.getId()) == null) {
             return null;
         }
+        if (elf.get(child.getId()).equals("yellow")) {
+            return null;
+        }
         if (elf.get(child.getId()).equals("black")) {
             return new Black();
         } else if (elf.get(child.getId()).equals("pink")) {

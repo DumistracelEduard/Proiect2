@@ -48,6 +48,16 @@ public class Child {
         this.receivedGifts = new ArrayList<>();
     }
 
+    public void checkPreferences() {
+        for (int i = 0; i < giftsPreferences.size(); ++i) {
+            for (int j = i + 1; j < giftsPreferences.size() - 1; ++j) {
+                if (giftsPreferences.get(i).equals(giftsPreferences.get(j))) {
+                    giftsPreferences.remove(j);
+                }
+            }
+        }
+    }
+
     /**
      * updateaza lista de categori de preferinte
      * @param newPreferences
@@ -88,24 +98,6 @@ public class Child {
     }
 
     /**
-     * selecteaza tipul de medie adecvata varstei
-     */
-    public void calculateAverage() {
-        final int number1 = 5;
-        final int number2 = 12;
-        if (age < number1) {
-            Average average = new Average(new AverageBaby());
-            this.averageScore = average.executeAverage(niceScoreHistory);
-        } else if (age < number2) {
-            Average average = new Average(new AverageKid());
-            this.averageScore = average.executeAverage(niceScoreHistory);
-        } else {
-            Average average = new Average(new AverageTeen());
-            this.averageScore = average.executeAverage(niceScoreHistory);
-        }
-    }
-
-    /**
      * adauga scorul de cumintenie daca nu este null
      * @param newScore
      */
@@ -113,7 +105,6 @@ public class Child {
         final int number = 18;
         if (newScore != -1 && age <= number) {
             this.niceScoreHistory.add(newScore);
-            calculateAverage();
         }
     }
 
@@ -167,5 +158,21 @@ public class Child {
 
     public final List<Gift> getReceivedGifts() {
         return receivedGifts;
+    }
+
+    @Override
+    public String toString() {
+        return "Child{" +
+                "id=" + id +
+                ", lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", city='" + city + '\'' +
+                ", age=" + age +
+                ", giftsPreferences=" + giftsPreferences +
+                ", averageScore=" + averageScore +
+                ", niceScoreHistory=" + niceScoreHistory +
+                ", assignedBudget=" + assignedBudget +
+                ", receivedGifts=" + receivedGifts +
+                '}';
     }
 }

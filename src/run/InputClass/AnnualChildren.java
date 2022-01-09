@@ -1,5 +1,10 @@
 package run.InputClass;
 
+import run.NiceScore;
+import run.elf.BlackOrPink;
+import run.elf.RunBlackOrPink;
+import run.elf.Yellow;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -45,6 +50,7 @@ public final class AnnualChildren {
             }
         }
         children.getChildren().sort(Comparator.comparingInt(Child::getId));
+
     }
 
     /**
@@ -56,9 +62,9 @@ public final class AnnualChildren {
                            final List<Gift> newGifts) {
         for (Gift newGift: newGifts) {
             if (listGift.containsKey(newGift.getCategory())) {
-                listGift.get(newGift.getCategory()).add(newGift);
-                listGift.get(newGift.getCategory()).sort(Comparator.
-                        comparingDouble(Gift::getPrice));
+                ArrayList<Gift> list = listGift.get(newGift.getCategory());
+                list.add(newGift);
+                list.sort(Comparator.comparingDouble(Gift::getPrice));
             } else {
                 ArrayList<Gift> newCategory = new ArrayList<>();
                 newCategory.add(newGift);
@@ -73,10 +79,12 @@ public final class AnnualChildren {
      * @param children
      */
     public void updateDataChild(final List<ChildUpdate> childUpdates,
-                                final Children children) {
+                                final Children children,
+                                final HashMap<Integer, String> elf) {
         for (ChildUpdate childUpdate: childUpdates) {
             for (Child child: children.getChildren()) {
                 if (child.getId().equals(childUpdate.getId())) {
+                    elf.put(childUpdate.getId(), childUpdate.getElf());
                     child.updateGiftPreferences(childUpdate.getGiftsPreference());
                     child.addNiceScore(childUpdate.getNiceScore());
                 }
@@ -102,12 +110,14 @@ public final class AnnualChildren {
         double santaBudget;
         for (int i = 0; i < numberOfYears; ++i) {
             santaBudget = annualChanges.get(i).getNewSantaBudget();
-
             Children children1 = new Children(children.getAnnualChildren().get(i));
             updateGift(listGift, annualChanges.get(i).getGiftList());
             updateChild(children1, annualChanges.get(i).getNewChildren());
-            updateDataChild(annualChanges.get(i).getChildrenUpdates(), children1);
+            updateDataChild(annualChanges.get(i).getChildrenUpdates(), children1, elf);
             calculateData(children1, santaBudget, listGift, listScoreBonus, elf, annualChanges.get(i), quantity, 1);
+            for (Child child: children1.getChildren()) {
+                Yellow.YellowRun(child, elf.get(child.getId()), listGift, quantity);
+            }
             children.getAnnualChildren().add(children1);
         }
     }

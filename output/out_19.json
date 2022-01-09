@@ -34,7 +34,7 @@
       "giftsPreferences" : [ "Technology", "Toys", "Clothes", "Sweets" ],
       "averageScore" : 9.0,
       "niceScoreHistory" : [ 9.0 ],
-      "assignedBudget" : 232.0434782608696,
+      "assignedBudget" : 184.03448275862067,
       "receivedGifts" : [ {
         "productName" : "Dress",
         "price" : 45.0,
@@ -51,9 +51,9 @@
       "city" : "Brasov",
       "age" : 2,
       "giftsPreferences" : [ "Clothes", "Sweets" ],
-      "averageScore" : 9.0,
+      "averageScore" : 10.0,
       "niceScoreHistory" : [ 9.0 ],
-      "assignedBudget" : 232.0434782608696,
+      "assignedBudget" : 204.48275862068965,
       "receivedGifts" : [ {
         "productName" : "Shoes",
         "price" : 70.0,
@@ -70,9 +70,9 @@
       "city" : "Craiova",
       "age" : 4,
       "giftsPreferences" : [ "Toys", "Sweets" ],
-      "averageScore" : 5.0,
+      "averageScore" : 10.0,
       "niceScoreHistory" : [ 5.0 ],
-      "assignedBudget" : 128.91304347826087,
+      "assignedBudget" : 204.48275862068965,
       "receivedGifts" : [ {
         "productName" : "Milk and Cookies",
         "price" : 30.0,
@@ -89,7 +89,7 @@
       "giftsPreferences" : [ "Toys", "Clothes", "Sweets", "Technology" ],
       "averageScore" : 9.0,
       "niceScoreHistory" : [ 9.0 ],
-      "assignedBudget" : 259.8,
+      "assignedBudget" : 155.88,
       "receivedGifts" : [ {
         "productName" : "Shoes",
         "price" : 70.0,
@@ -106,10 +106,18 @@
       "city" : "Brasov",
       "age" : 3,
       "giftsPreferences" : [ "Clothes", "Sweets" ],
-      "averageScore" : 0.0,
+      "averageScore" : 10.0,
       "niceScoreHistory" : [ 9.0 ],
-      "assignedBudget" : 0.0,
-      "receivedGifts" : [ ]
+      "assignedBudget" : 173.2,
+      "receivedGifts" : [ {
+        "productName" : "Shoes",
+        "price" : 70.0,
+        "category" : "Clothes"
+      }, {
+        "productName" : "Milk and Cookies",
+        "price" : 30.0,
+        "category" : "Sweets"
+      } ]
     }, {
       "id" : 4,
       "lastName" : "Stoica",
@@ -119,7 +127,7 @@
       "giftsPreferences" : [ "Clothes", "Sweets", "Toys" ],
       "averageScore" : 6.0,
       "niceScoreHistory" : [ 5.0, 7.0 ],
-      "assignedBudget" : 173.2,
+      "assignedBudget" : 103.92,
       "receivedGifts" : [ {
         "productName" : "Shoes",
         "price" : 70.0,

@@ -16,8 +16,8 @@ public class WitchCity {
             } else {
                 for (City city: listCity) {
                     if (city.getName().equals(child.getCity())) {
-                        city.addChild(child);
                         city.addScore(child.getAverageScore());
+                        city.addChild(child);
                         ok = 1;
                     }
                 }
@@ -29,13 +29,17 @@ public class WitchCity {
                 }
             }
         }
-
-        Collections.sort(listCity, new Comparator<City>() {
+        Comparator comparator = new Comparator<City>() {
             @Override
             public int compare(City o1, City o2) {
-                return Double.compare(o1.getScore(), o2.getScore());
+                if (Double.compare(o2.getScore(), o1.getScore()) == 0) {
+                    return o1.getName().compareTo(o2.getName());
+                }
+                return Double.compare(o2.getScore(), o1.getScore());
             }
-        });
+        };
+        listCity.sort(comparator);
+        System.out.println(listCity.toString());
         return listCity;
     }
 }
