@@ -7,7 +7,7 @@
       "city" : "Brasov",
       "age" : 18,
       "giftsPreferences" : [ "Sweets", "Board Games", "Books", "Technology", "Toys" ],
-      "averageScore" : 5.2,
+      "averageScore" : 3.64,
       "niceScoreHistory" : [ 4.0 ],
       "assignedBudget" : 934.0,
       "receivedGifts" : [ {

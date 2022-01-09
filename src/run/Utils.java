@@ -6,6 +6,7 @@ import run.InputClass.Children;
 import run.InputClass.Gift;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import run.elf.RunBlackOrPink;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,9 +24,11 @@ public final class Utils {
      * @param listGift
      */
     public static void distributionGift(final double budgetUnit, final Children children,
-                                        final HashMap<String, ArrayList<Gift>> listGift) {
+                                        final HashMap<String, ArrayList<Gift>> listGift,
+                                        final HashMap<Integer, String> elf) {
         for (Child child : children.getChildren()) {
             double buget = child.calculateBudget(budgetUnit);
+            RunBlackOrPink.run(child, elf);
             for (String giftPreference : child.getGiftsPreferences()) {
                 if (listGift.get(giftPreference) != null
                         && buget - listGift.get(giftPreference).get(0).getPrice() > 0.0) {
@@ -110,8 +113,7 @@ public final class Utils {
                         Double.parseDouble(((JSONObject) object)
                                 .get(Constants.PRICE).toString()),
                         (String) ((JSONObject) object)
-                                .get(Constants.CATEGORY)
-                        ));
+                                .get(Constants.CATEGORY)));
                 quantity.put((String) ((JSONObject) object)
                         .get(Constants.PRODUCTNAME),
                         Integer.parseInt(((JSONObject) object).get(Constants.QUANTITY)

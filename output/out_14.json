@@ -51,12 +51,12 @@
       "niceScoreHistory" : [ 4.0, 3.0 ],
       "assignedBudget" : 316.5,
       "receivedGifts" : [ {
-        "productName" : "Puzzle",
-        "price" : 50.0,
-        "category" : "Board Games"
-      }, {
         "productName" : "Teddy Bear",
         "price" : 5.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
         "category" : "Toys"
       } ]
     }, {
@@ -89,10 +89,6 @@
       "niceScoreHistory" : [ 7.0 ],
       "assignedBudget" : 221.54999999999998,
       "receivedGifts" : [ {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys"
-      }, {
         "productName" : "Harry Potter",
         "price" : 35.0,
         "category" : "Books"
@@ -110,10 +106,6 @@
       "niceScoreHistory" : [ 4.0, 3.0, 9.0 ],
       "assignedBudget" : 506.4,
       "receivedGifts" : [ {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys"
-      }, {
         "productName" : "Harry Potter",
         "price" : 35.0,
         "category" : "Books"
@@ -121,10 +113,6 @@
         "productName" : "Dress",
         "price" : 45.0,
         "category" : "Clothes"
-      }, {
-        "productName" : "Puzzle",
-        "price" : 50.0,
-        "category" : "Board Games"
       } ]
     }, {
       "id" : 1,
@@ -140,10 +128,6 @@
         "productName" : "Dress",
         "price" : 45.0,
         "category" : "Clothes"
-      }, {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys"
       } ]
     }, {
       "id" : 2,
@@ -169,14 +153,6 @@
       "niceScoreHistory" : [ 4.0, 3.0, 9.0, 6.0 ],
       "assignedBudget" : 186.65625,
       "receivedGifts" : [ {
-        "productName" : "Puzzle",
-        "price" : 50.0,
-        "category" : "Board Games"
-      }, {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys"
-      }, {
         "productName" : "Harry Potter",
         "price" : 35.0,
         "category" : "Books"
@@ -196,10 +172,6 @@
       "niceScoreHistory" : [ 7.0, 1.0, 2.0 ],
       "assignedBudget" : 84.84375,
       "receivedGifts" : [ {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys"
-      }, {
         "productName" : "Dress",
         "price" : 45.0,
         "category" : "Clothes"
@@ -215,14 +187,6 @@
       "niceScoreHistory" : [ 7.0, 3.0 ],
       "assignedBudget" : 147.0625,
       "receivedGifts" : [ {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys"
-      }, {
-        "productName" : "Puzzle",
-        "price" : 50.0,
-        "category" : "Board Games"
-      }, {
         "productName" : "Harry Potter",
         "price" : 35.0,
         "category" : "Books"
@@ -238,10 +202,6 @@
       "niceScoreHistory" : [ 9.0 ],
       "assignedBudget" : 305.4375,
       "receivedGifts" : [ {
-        "productName" : "Puzzle",
-        "price" : 50.0,
-        "category" : "Board Games"
-      }, {
         "productName" : "Harry Potter",
         "price" : 35.0,
         "category" : "Books"

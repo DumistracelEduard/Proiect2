@@ -58,11 +58,17 @@ public final class NiceScore {
             Average average = new Average(new AverageKid());
             niceScoreFinal = average.executeAverage(niceScoreHistory);
             niceScoreFinal = niceScoreFinal + ((niceScoreFinal * niceScoreBonus) / number0);
+            if (niceScoreFinal > 10) {
+                niceScoreFinal = 10;
+            }
             this.niceScore = niceScoreFinal;
         } else {
             Average average = new Average(new AverageTeen());
             niceScoreFinal = average.executeAverage(niceScoreHistory);
             niceScoreFinal = niceScoreFinal + ((niceScoreFinal * niceScoreBonus) / number0);
+            if (niceScoreFinal > 10) {
+                niceScoreFinal = 10;
+            }
             this.niceScore = niceScoreFinal;
         }
     }

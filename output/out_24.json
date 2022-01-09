@@ -112,8 +112,8 @@
       "niceScoreHistory" : [ 4.0, 8.0, 8.0, 1.0 ],
       "assignedBudget" : 887.0,
       "receivedGifts" : [ {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
+        "productName" : "Doll",
+        "price" : 10.0,
         "category" : "Toys"
       }, {
         "productName" : "Handbag",
@@ -156,8 +156,8 @@
         "price" : 45.0,
         "category" : "Clothes"
       }, {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
+        "productName" : "Doll",
+        "price" : 10.0,
         "category" : "Toys"
       } ]
     }, {

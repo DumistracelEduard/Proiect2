@@ -66,4 +66,8 @@ public class InputData {
     public final HashMap<Integer, String> getListElf() {
         return listElf;
     }
+
+    public HashMap<String, Integer> getQuantity() {
+        return quantity;
+    }
 }

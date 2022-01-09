@@ -8,6 +8,8 @@ public class RunBlackOrPink {
     public static void run(Child child, HashMap<Integer, String> elf) {
         WitchPinkBlack witchPinkBlack = new WitchPinkBlack();
         BlackOrPink blackOrPink = witchPinkBlack.witch(child, elf);
-        blackOrPink.run(child);
+        if(blackOrPink != null ) {
+            blackOrPink.run(child);
+        }
     }
 }

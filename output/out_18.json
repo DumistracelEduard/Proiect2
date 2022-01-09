@@ -7,7 +7,7 @@
       "city" : "Brasov",
       "age" : 7,
       "giftsPreferences" : [ "Technology", "Books" ],
-      "averageScore" : 8.0,
+      "averageScore" : 5.6,
       "niceScoreHistory" : [ 8.0 ],
       "assignedBudget" : 404.0,
       "receivedGifts" : [ {
@@ -22,7 +22,7 @@
       "city" : "Oradea",
       "age" : 8,
       "giftsPreferences" : [ "Toys", "Board Games" ],
-      "averageScore" : 2.0,
+      "averageScore" : 1.4,
       "niceScoreHistory" : [ 2.0 ],
       "assignedBudget" : 101.0,
       "receivedGifts" : [ {
@@ -41,7 +41,7 @@
       "city" : "Bucuresti",
       "age" : 10,
       "giftsPreferences" : [ "Clothes", "Toys", "Board Games" ],
-      "averageScore" : 3.0,
+      "averageScore" : 2.1,
       "niceScoreHistory" : [ 3.0 ],
       "assignedBudget" : 151.5,
       "receivedGifts" : [ {
@@ -60,7 +60,7 @@
       "city" : "Constanta",
       "age" : 18,
       "giftsPreferences" : [ "Sweets", "Toys", "Board Games" ],
-      "averageScore" : 9.0,
+      "averageScore" : 6.3,
       "niceScoreHistory" : [ 9.0 ],
       "assignedBudget" : 454.5,
       "receivedGifts" : [ {
@@ -85,7 +85,7 @@
       "city" : "Brasov",
       "age" : 8,
       "giftsPreferences" : [ "Technology", "Books" ],
-      "averageScore" : 8.0,
+      "averageScore" : 5.6,
       "niceScoreHistory" : [ 8.0, 8.0 ],
       "assignedBudget" : 538.6666666666666,
       "receivedGifts" : [ {
@@ -100,7 +100,7 @@
       "city" : "Oradea",
       "age" : 9,
       "giftsPreferences" : [ "Books", "Technology", "Sweets", "Toys", "Board Games" ],
-      "averageScore" : 2.0,
+      "averageScore" : 1.4,
       "niceScoreHistory" : [ 2.0 ],
       "assignedBudget" : 134.66666666666666,
       "receivedGifts" : [ {
@@ -112,12 +112,12 @@
         "price" : 15.0,
         "category" : "Sweets"
       }, {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
+        "productName" : "Doll",
+        "price" : 10.0,
         "category" : "Toys"
       }, {
-        "productName" : "Monopoly",
-        "price" : 30.0,
+        "productName" : "Puzzle",
+        "price" : 50.0,
         "category" : "Board Games"
       } ]
     }, {
@@ -127,7 +127,7 @@
       "city" : "Bucuresti",
       "age" : 11,
       "giftsPreferences" : [ "Clothes", "Toys", "Board Games" ],
-      "averageScore" : 6.5,
+      "averageScore" : 4.55,
       "niceScoreHistory" : [ 3.0, 10.0 ],
       "assignedBudget" : 437.66666666666663,
       "receivedGifts" : [ {
@@ -139,8 +139,8 @@
         "price" : 5.0,
         "category" : "Toys"
       }, {
-        "productName" : "Monopoly",
-        "price" : 30.0,
+        "productName" : "Puzzle",
+        "price" : 50.0,
         "category" : "Board Games"
       } ]
     } ]
@@ -152,7 +152,7 @@
       "city" : "Brasov",
       "age" : 9,
       "giftsPreferences" : [ "Technology", "Books" ],
-      "averageScore" : 8.333333333333334,
+      "averageScore" : 5.833333333333334,
       "niceScoreHistory" : [ 8.0, 8.0, 9.0 ],
       "assignedBudget" : 539.3203883495146,
       "receivedGifts" : [ {
@@ -167,16 +167,16 @@
       "city" : "Oradea",
       "age" : 10,
       "giftsPreferences" : [ "Technology", "Toys", "Board Games", "Books", "Sweets" ],
-      "averageScore" : 2.0,
+      "averageScore" : 1.4,
       "niceScoreHistory" : [ 2.0 ],
       "assignedBudget" : 129.4368932038835,
       "receivedGifts" : [ {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
+        "productName" : "Doll",
+        "price" : 10.0,
         "category" : "Toys"
       }, {
-        "productName" : "Monopoly",
-        "price" : 30.0,
+        "productName" : "Puzzle",
+        "price" : 50.0,
         "category" : "Board Games"
       }, {
         "productName" : "Twilight",
@@ -194,7 +194,7 @@
       "city" : "Bucuresti",
       "age" : 12,
       "giftsPreferences" : [ "Clothes", "Toys", "Board Games" ],
-      "averageScore" : 6.833333333333333,
+      "averageScore" : 4.783333333333333,
       "niceScoreHistory" : [ 3.0, 10.0, 6.0 ],
       "assignedBudget" : 442.24271844660194,
       "receivedGifts" : [ {
@@ -202,12 +202,12 @@
         "price" : 200.0,
         "category" : "Clothes"
       }, {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
+        "productName" : "Doll",
+        "price" : 10.0,
         "category" : "Toys"
       }, {
-        "productName" : "Monopoly",
-        "price" : 30.0,
+        "productName" : "Puzzle",
+        "price" : 50.0,
         "category" : "Board Games"
       } ]
     } ]
