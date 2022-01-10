@@ -4,9 +4,9 @@ import java.util.List;
 
 public class AverageTeen implements AverageScoreCalculator {
     /**
-     * in caz ca este Teen face media ponderata
-     * @param niceScoreHistory
-     * @return
+     * in caz ca copilul este Teen face media ponderata
+     * @param niceScoreHistory lista de scoruri
+     * @return returneaza media
      */
     @Override
     public double doAverage(final List<Double> niceScoreHistory) {

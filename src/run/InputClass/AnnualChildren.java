@@ -14,8 +14,8 @@ public final class AnnualChildren {
 
     /**
      * constructor
-     * @param numberOfYears
-     * @param children
+     * @param numberOfYears numarul de ani
+     * @param children lista de copii
      */
     public AnnualChildren(final Integer numberOfYears, final Children children) {
         this.annualChildren = new ArrayList<>(numberOfYears + 1);
@@ -24,8 +24,8 @@ public final class AnnualChildren {
 
     /**
      * adaug fiecare copil care nu apare in lista si este sub 19 ani
-     * @param children
-     * @param newChildren
+     * @param children lista de copii
+     * @param newChildren lista noua de copii
      */
     public void updateChild(final Children children, final List<Child> newChildren) {
         int ok;
@@ -52,8 +52,8 @@ public final class AnnualChildren {
 
     /**
      * adaug cadourile careapar in urm ani
-     * @param listGift
-     * @param newGifts
+     * @param listGift lista de cadouri
+     * @param newGifts lista de cadouri noi
      */
     public void updateGift(final HashMap<String, ArrayList<Gift>> listGift,
                            final List<Gift> newGifts) {
@@ -72,8 +72,9 @@ public final class AnnualChildren {
 
     /**
      * updatam datele la fiecare copil
-     * @param childUpdates
-     * @param children
+     * @param childUpdates lista de update copii
+     * @param children lista de copii
+     * @param elf lista de elfi
      */
     public void updateDataChild(final List<ChildUpdate> childUpdates,
                                 final Children children,
@@ -92,10 +93,13 @@ public final class AnnualChildren {
     /**
      * realizez update-ul pentru fiecare an si salvez fiecare lista
      * de copii in children
-     * @param annualChanges
-     * @param children
-     * @param listGift
-     * @param numberOfYears
+     * @param annualChanges schimbari anuale
+     * @param children lista de copii
+     * @param listGift lista de cadouri
+     * @param numberOfYears numarul de ani
+     * @param elf lista de elfi
+     * @param listScoreBonus lista de scoruri bonus
+     * @param quantityYear cantitatea pe fiecare an
      */
     public void annualUpdate(final List<AnnualChanges> annualChanges,
                              final AnnualChildren children,

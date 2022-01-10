@@ -14,7 +14,7 @@ public class Child {
     private double averageScore;
     private final List<Double> niceScoreHistory;
     private double assignedBudget;
-    private List<Gift> receivedGifts;
+    private final List<Gift> receivedGifts;
 
     public Child(final Child child) {
         this.id = child.getId();
@@ -25,6 +25,8 @@ public class Child {
         this.giftsPreferences = new ArrayList<>(child.getGiftsPreferences());
         this.niceScoreHistory = new ArrayList<>(child.getNiceScoreHistory());
         this.receivedGifts = new ArrayList<>();
+        this.averageScore = 0;
+        this.assignedBudget = 0;
     }
 
     public Child(final Integer id, final String lastName,
@@ -59,10 +61,10 @@ public class Child {
 
     /**
      * updateaza lista de categori de preferinte
-     * @param newPreferences
+     * @param newPreferences lista de preferinte
      */
     public void updateGiftPreferences(final List<String> newPreferences) {
-        int ok = 0;
+        int ok;
         for (String oldPreferences: giftsPreferences) {
             ok = 0;
             for (String newPreference: newPreferences) {
@@ -77,10 +79,10 @@ public class Child {
 
         HashMap<String, String> duplicate = new HashMap<>();
         ArrayList<String> finalPreferences = new ArrayList<>();
-        for (int i = 0; i < newPreferences.size(); ++i) {
-            if (!duplicate.containsKey(newPreferences.get(i))) {
-                finalPreferences.add(newPreferences.get(i));
-                duplicate.put(newPreferences.get(i), newPreferences.get(i));
+        for (String newPreference : newPreferences) {
+            if (!duplicate.containsKey(newPreference)) {
+                finalPreferences.add(newPreference);
+                duplicate.put(newPreference, newPreference);
             }
         }
         this.giftsPreferences = finalPreferences;
@@ -88,17 +90,15 @@ public class Child {
 
     /**
      * calculeaza bugetul
-     * @param budgetUnit
-     * @return
+     * @param budgetUnit bugetul pe unitate
      */
-    public Double calculateBudget(final double budgetUnit) {
+    public void calculateBudget(final double budgetUnit) {
         this.assignedBudget = averageScore * budgetUnit;
-        return assignedBudget;
     }
 
     /**
      * adauga scorul de cumintenie daca nu este null
-     * @param newScore
+     * @param newScore noul score adaugat
      */
     public void addNiceScore(final double newScore) {
         final int number = 18;

@@ -10,8 +10,8 @@ import java.util.List;
 
 public class InputData {
     private final Integer numberOfYears;
-    private double santaBudget;
-    private List<Object> dataStore = new ArrayList<>();
+    private final double santaBudget;
+    private final List<Object> dataStore = new ArrayList<>();
     private final List<AnnualChanges> annualChanges;
     private final HashMap<Integer, Double> listScoreBonus;
     private final HashMap<Integer, String> listElf;
@@ -20,12 +20,15 @@ public class InputData {
 
     /**
      * constructor
-     * @param numberOfYears
-     * @param santaBudget
-     * @param childList
-     * @param giftList
-     * @param cityList
-     * @param annualChanges
+     * @param numberOfYears numarul de ani
+     * @param santaBudget buget
+     * @param childList lista de copii
+     * @param giftList lista de cadouri
+     * @param cityList lista de orase
+     * @param annualChanges schimbari anuale
+     * @param listElf lista de elfi
+     * @param quantity lista de cantitati pentru fiecare an
+     * @param listScoreBonus lista de scoruri bonus
      */
     public InputData(final Integer numberOfYears, final double santaBudget,
                      final List<Child> childList, final List<Gift> giftList,

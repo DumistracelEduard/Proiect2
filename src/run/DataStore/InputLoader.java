@@ -21,7 +21,7 @@ public final class InputLoader {
 
     /**
      * salvam path-ul
-     * @param inputPath
+     * @param inputPath calea de input
      */
     public InputLoader(final String inputPath) {
         this.inputPath = inputPath;
@@ -29,7 +29,7 @@ public final class InputLoader {
 
     /**
      * citesc input data utilizand JSONParser
-     * @return
+     * @return inputData
      */
     public InputData readData() {
         JSONParser jsonParser = new JSONParser();
@@ -110,7 +110,7 @@ public final class InputLoader {
                             new AnnualChanges(Double.parseDouble(((JSONObject) jsonChange)
                                     .get(Constants.NEWSANTABUDGET).toString()),
                             Utils.convertJSONArrayGift((JSONArray) ((JSONObject) jsonChange)
-                                    .get(Constants.NEWGIFTS), newQuantity, i, quantityYear),
+                                    .get(Constants.NEWGIFTS), newQuantity),
                             Utils.convertJSONArrayChildren((JSONArray) ((JSONObject) jsonChange)
                                     .get(Constants.NEWCHILDREN), listElf, listScoreBonus),
                             Utils.convertJSONArrayChildUpdate((JSONArray) ((JSONObject) jsonChange)

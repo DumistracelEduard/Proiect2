@@ -7,7 +7,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -18,8 +17,8 @@ public final class Utils {
     /**
      * convert lista de object pentru cadouri in hashmap de liste
      * fiecare lista fiin in ordine desc a preturilor
-     * @param array
-     * @return
+     * @param array array de object
+     * @return array de cadouri
      */
     public static HashMap<String, ArrayList<Gift>> convertObjectGift(final List<Object> array) {
         HashMap<String, ArrayList<Gift>> listGift = new HashMap<>();
@@ -27,12 +26,8 @@ public final class Utils {
             Gift giftSearch = (Gift) gift;
             if (listGift.containsKey(giftSearch.getCategory())) {
                 listGift.get(giftSearch.getCategory()).add(giftSearch);
-                Collections.sort(listGift.get(giftSearch.getCategory()), new Comparator<Gift>() {
-                    @Override
-                    public int compare(final Gift o1, final Gift o2) {
-                        return Double.compare(o1.getPrice(), o2.getPrice());
-                    }
-                });
+                listGift.get(giftSearch.getCategory())
+                        .sort(Comparator.comparingDouble(Gift::getPrice));
             } else {
                 ArrayList<Gift> newCategory = new ArrayList<>();
                 newCategory.add(giftSearch);
@@ -44,8 +39,8 @@ public final class Utils {
 
     /**
      * convert de la lista de Object la lista de copii
-     * @param array
-     * @return
+     * @param array array de liste
+     * @return array de copii
      */
     public static ArrayList<Child> convertObject(final List<Object> array) {
         final int number = 18;
@@ -60,8 +55,8 @@ public final class Utils {
 
     /**
      * convert de la lista de JSONArray in lista de String
-     * @param array
-     * @return
+     * @param array array de object
+     * @return array de String
      */
     public static ArrayList<String> convertJSONArrayString(final JSONArray array) {
         if (array != null) {
@@ -77,14 +72,11 @@ public final class Utils {
 
     /**
      * convert de la JSONArray la lista de cadouri
-     * @param array
-     * @return
+     * @param array array de object
+     * @return array de cadouri
      */
     public static ArrayList<Gift> convertJSONArrayGift(final JSONArray array,
-                                                       final HashMap<String, Integer> quantity,
-                                                       final int i,
-                                                       final List<HashMap
-                                                               <String, Integer>> quantityYear) {
+                                                       final HashMap<String, Integer> quantity) {
         if (array != null) {
             ArrayList<Gift> finalArrayGift = new ArrayList<>();
             for (Object object : array) {
@@ -118,8 +110,8 @@ public final class Utils {
 
     /**
      * convert de la JSON Array la lista de copii
-     * @param array
-     * @return
+     * @param array de object
+     * @return array de copii
      */
     public static ArrayList<Child> convertJSONArrayChildren(final JSONArray array,
                                                             final HashMap<Integer, String> elf,
@@ -139,7 +131,7 @@ public final class Utils {
                                 .get(Constants.GIFTSPREFERENCES)),
                         Double.parseDouble(((JSONObject) object).get(Constants.NICESCORE)
                                 .toString())));
-                if ((String) ((JSONObject) object).get(Constants.ELF) != null) {
+                if (((JSONObject) object).get(Constants.ELF) != null) {
                     elf.put(Integer.parseInt(((JSONObject) object)
                             .get(Constants.ID).toString()), (String) ((JSONObject) object)
                             .get(Constants.ELF));
@@ -157,8 +149,8 @@ public final class Utils {
 
     /**
      * convert lista de object in lista de ChildUpdate
-     * @param array
-     * @return
+     * @param array de object
+     * @return lista de childupdate
      */
     public static ArrayList<ChildUpdate> convertJSONArrayChildUpdate(final JSONArray array) {
         if (array != null) {

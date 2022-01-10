@@ -15,11 +15,11 @@ public final class Yellow {
     /**
      * in caz ca elful este yellow se ia primul cadou din prima prefererinta
      * doar daca copilul nu are cadou sau cadoul inca e pe stoc
-     * @param child
-     * @param elf
-     * @param gifts
-     * @param quantity
-     * @param quantityYear
+     * @param child copil
+     * @param elf elful copilului
+     * @param gifts lista de cadouri
+     * @param quantity lista de cantitati a anului
+     * @param quantityYear lista de cantitati pentru fiecare an
      */
     public static void yellowRun(final Child child, final String elf,
                                  final HashMap<String, ArrayList<Gift>> gifts,
@@ -31,12 +31,7 @@ public final class Yellow {
             }
             if (gifts.containsKey(child.getGiftsPreferences().get(0))) {
                 ArrayList<Gift> giftsList = gifts.get(child.getGiftsPreferences().get(0));
-                Comparator comparator = new Comparator<Gift>() {
-                    @Override
-                    public int compare(final Gift o1, final Gift o2) {
-                        return Double.compare(o1.getPrice(), o2.getPrice());
-                    }
-                };
+                Comparator<Gift> comparator = Comparator.comparingDouble(Gift::getPrice);
                 giftsList.sort(comparator);
 
                 if (quantity.containsKey(giftsList.get(0).getProductName())

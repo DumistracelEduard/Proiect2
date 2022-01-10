@@ -10,8 +10,8 @@ public final class RunBlackOrPink {
     /**
      * apeleaza functia de a verifica ce elf e si apeleaza metoda de calculare
      * specifica
-     * @param child
-     * @param elf
+     * @param child copil
+     * @param elf lista de elfi
      */
     public static void run(final Child child, final HashMap<Integer, String> elf) {
         WitchPinkBlack witchPinkBlack = new WitchPinkBlack();

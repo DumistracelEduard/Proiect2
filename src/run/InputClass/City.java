@@ -1,14 +1,13 @@
 package run.InputClass;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class City {
     private double score;
-    private String name;
-    private ArrayList<Double> niceScores;
-    private ArrayList<Child> children;
+    private final String name;
+    private final ArrayList<Double> niceScores;
+    private final ArrayList<Child> children;
 
     public City(final String name) {
         this.name = name;
@@ -19,7 +18,7 @@ public class City {
 
     /**
      * adauga in lista de Score-uri ale orasului
-     * @param niceScore
+     * @param niceScore noul score adaugat
      */
     public void addScore(final double niceScore) {
         this.niceScores.add(niceScore);
@@ -28,16 +27,11 @@ public class City {
     /**
      * adauga copilul in lista si sorteaza dupa ID si calcueaza
      * de fiecare data cand se adauga un copil Score-ul orasului
-     * @param child
+     * @param child noul copil adaugat
      */
     public void addChild(final Child child) {
         this.children.add(child);
-        Collections.sort(children, new Comparator<Child>() {
-            @Override
-            public int compare(final Child o1, final Child o2) {
-                return Integer.compare(o1.getId(), o2.getId());
-            }
-        });
+        children.sort(Comparator.comparingInt(Child::getId));
         double sum = 0;
         for (Double scoreAdd: niceScores) {
             sum += scoreAdd;
@@ -51,10 +45,6 @@ public class City {
 
     public final String getName() {
         return name;
-    }
-
-    public final ArrayList<Double> getNiceScores() {
-        return niceScores;
     }
 
     public final ArrayList<Child> getChildren() {

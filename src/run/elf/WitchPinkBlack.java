@@ -7,8 +7,8 @@ import java.util.HashMap;
 public class WitchPinkBlack {
     /**
      * verifica ce fel de tip e de elf
-     * @param child
-     * @param elf
+     * @param child copil
+     * @param elf lista de elfi
      * @return
      */
     public BlackOrPink witch(final Child child, final HashMap<Integer, String> elf) {

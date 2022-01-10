@@ -9,13 +9,13 @@ import java.util.List;
 
 public final class NiceScore {
     private double niceScore;
-    private List<Double> niceScoreHistory;
-    private Integer age;
-    private double niceScoreBonus;
+    private final List<Double> niceScoreHistory;
+    private final Integer age;
+    private final double niceScoreBonus;
 
     public static final class Builder {
-        private Integer age;
-        private List<Double> niceScoreHistory;
+        private final Integer age;
+        private final List<Double> niceScoreHistory;
         private double niceScoreBonus = 0;
 
         public Builder(final Integer age, final List<Double> niceScoreHistory) {
@@ -25,7 +25,7 @@ public final class NiceScore {
 
         /**
          * niceScoreBonus nu e neaparat necesar
-         * @param bonusNiceScore
+         * @param bonusNiceScore score-ul bonus
          * @return
          */
         public Builder niceScoreBonus(final Double bonusNiceScore) {

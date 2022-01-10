@@ -11,10 +11,10 @@ public class AnnualChanges {
 
     /**
      * constructor
-     * @param newSantaBudget
-     * @param giftList
-     * @param newChildren
-     * @param childrenUpdates
+     * @param newSantaBudget noul buget
+     * @param giftList lista de cadouri
+     * @param newChildren lista noua de copii
+     * @param childrenUpdates lista de update-uri
      */
     public AnnualChanges(final double newSantaBudget, final List<Gift> giftList,
                          final List<Child> newChildren, final List<ChildUpdate> childrenUpdates,

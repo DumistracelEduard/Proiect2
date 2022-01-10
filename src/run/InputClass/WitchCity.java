@@ -9,8 +9,8 @@ public final class WitchCity {
     /**
      * calculeaza pentru fiecare lista de children scorul
      * pentru fiecare oras si dupa ordoneaza orasele
-     * @param children
-     * @return
+     * @param children lista de copii
+     * @return lista de orase sortate
      */
     public static List<City> addScoreCity(final Children children) {
         List<City> listCity = new ArrayList<>();
@@ -38,14 +38,11 @@ public final class WitchCity {
                 }
             }
         }
-        Comparator comparator = new Comparator<City>() {
-            @Override
-            public int compare(final City o1, final City o2) {
-                if (Double.compare(o2.getScore(), o1.getScore()) == 0) {
-                    return o1.getName().compareTo(o2.getName());
-                }
-                return Double.compare(o2.getScore(), o1.getScore());
+        Comparator<City> comparator = (o1, o2) -> {
+            if (Double.compare(o2.getScore(), o1.getScore()) == 0) {
+                return o1.getName().compareTo(o2.getName());
             }
+            return Double.compare(o2.getScore(), o1.getScore());
         };
         listCity.sort(comparator);
         return listCity;

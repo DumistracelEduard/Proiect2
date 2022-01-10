@@ -9,7 +9,6 @@ import run.InputClass.WitchCity;
 import run.elf.RunBlackOrPink;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -19,37 +18,32 @@ public final class GiftDistribution {
 
     /**
      * face update in toata lista de quantity
-     * @param quantityYear
-     * @param name
+     * @param quantityYear lista de cantitati pe an
+     * @param name numele obiectului cautat
      */
     public static void updateQuantity(final List<HashMap<String, Integer>> quantityYear,
                                       final String name) {
-        for (int i = 0; i < quantityYear.size(); ++i) {
-            if (quantityYear.get(i).containsKey(name)) {
-                Integer total = quantityYear.get(i).get(name);
+        for (HashMap<String, Integer> stringIntegerHashMap : quantityYear) {
+            if (stringIntegerHashMap.containsKey(name)) {
+                Integer total = stringIntegerHashMap.get(name);
                 total--;
-                quantityYear.get(i).put(name, total);
+                stringIntegerHashMap.put(name, total);
             }
         }
     }
 
     /**
      * distribuie cadourile dupa id
-     * @param children
-     * @param gifts
-     * @param quantity
-     * @param quantityYear
+     * @param children lista de copii
+     * @param gifts lista de cadouri
+     * @param quantity lista de cantitati
+     * @param quantityYear lista de cantitati pe toti anii
      */
     public static void idSort(final Children children,
                               final HashMap<String, ArrayList<Gift>> gifts,
                               final HashMap<String, Integer> quantity,
                               final List<HashMap<String, Integer>> quantityYear) {
-        Collections.sort(children.getChildren(), new Comparator<Child>() {
-            @Override
-            public int compare(final Child o1, final Child o2) {
-                return Integer.compare(o1.getId(), o2.getId());
-            }
-        });
+        children.getChildren().sort(Comparator.comparingInt(Child::getId));
         double buget;
         for (Child child: children.getChildren()) {
             buget = child.getAssignedBudget();
@@ -57,12 +51,7 @@ public final class GiftDistribution {
                 if (gifts.get(favorite) == null) {
                     continue;
                 }
-                Collections.sort(gifts.get(favorite), new Comparator<Gift>() {
-                    @Override
-                    public int compare(final Gift o1, final Gift o2) {
-                        return Double.compare(o1.getPrice(), o2.getPrice());
-                    }
-                });
+                gifts.get(favorite).sort(Comparator.comparingDouble(Gift::getPrice));
                 for (Gift gift: gifts.get(favorite)) {
                     if (buget - gift.getPrice() > 0) {
                         if (quantity.containsKey(gift.getProductName())
@@ -81,21 +70,17 @@ public final class GiftDistribution {
 
     /**
      * realizeaza distribuirea dupa niceScore
-     * @param children
-     * @param gifts
-     * @param quantity
-     * @param quantityYear
+     * @param children lista de copii
+     * @param gifts lista de cadouri
+     * @param quantity lista de cantitati
+     * @param quantityYear lista de cantitati in fiecare an
      */
     public static void niceScore(final Children children,
                                  final HashMap<String, ArrayList<Gift>> gifts,
                                  final HashMap<String, Integer> quantity,
                                  final List<HashMap<String, Integer>> quantityYear) {
-        Collections.sort(children.getChildren(), new Comparator<Child>() {
-            @Override
-            public int compare(final Child o1, final Child o2) {
-                return Double.compare(o2.getAverageScore(), o1.getAverageScore());
-            }
-        });
+        children.getChildren().sort((o1, o2) ->
+                Double.compare(o2.getAverageScore(), o1.getAverageScore()));
         double buget;
         for (Child child: children.getChildren()) {
             buget = child.getAssignedBudget();
@@ -117,14 +102,14 @@ public final class GiftDistribution {
 
     /**
      * calculeaza bugetul si vede ce fel de strategie sa ruleze
-     * @param children
-     * @param gifts
-     * @param annualChanges
-     * @param quantity
-     * @param elf
-     * @param budgetUnit
-     * @param year
-     * @param quantityYear
+     * @param children lista de copii
+     * @param gifts lista de cadouri
+     * @param annualChanges lista de schimbari anuale
+     * @param quantity lista de cantitati
+     * @param elf lista de elfi
+     * @param budgetUnit bugetul pe o unitate
+     * @param year verificam daca e alt an decat anul 0
+     * @param quantityYear lista de cantitati pe fiecare an
      */
     public static void witchStrategy(final Children children,
                                      final HashMap<String, ArrayList<Gift>> gifts,
@@ -140,12 +125,7 @@ public final class GiftDistribution {
         }
         if (annualChanges.getStrategy().equals("niceScore") && year != 0) {
             niceScore(children, gifts, quantity, quantityYear);
-            Collections.sort(children.getChildren(), new Comparator<Child>() {
-                @Override
-                public int compare(final Child o1, final Child o2) {
-                    return Integer.compare(o1.getId(), o2.getId());
-                }
-            });
+            children.getChildren().sort(Comparator.comparingInt(Child::getId));
         } else if (annualChanges.getStrategy().equals("niceScoreCity") && year != 0) {
             List<City> listCity =  WitchCity.addScoreCity(children);
             double buget;

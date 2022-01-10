@@ -5,7 +5,7 @@ import run.InputClass.Child;
 public class Pink implements BlackOrPink {
     /**
      * daca are elf pink se aduna 30%
-     * @param child
+     * @param child copil
      */
     @Override
     public void run(final Child child) {
