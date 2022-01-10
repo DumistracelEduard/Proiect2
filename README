@@ -1,19 +1,33 @@
 324CA Dumistracel Eduard-Costin
 
-	In realizarea temei am folosit JSONParser pentru citire si objectMapper 
-pentru scriere.In realizarea acestui proiect am folosit Singleton pattern si
-Strategy pattern.
+	In realizarea etapei a doua am stocat cadourile si cu update-urile de cadouri
+intr-o lista de Hashmap-uri in care fiecare Hashmap reprezenta cate un an. Astfel
+la inceput fiecare element era pus in toate hashmapurile, iar apoi in functie de
+update-ul la cadouri (daca se schimba cantitatea sau se adauga alt cadou), erau
+adaugate in anul corespunzator.
+    In folosit (pe langa cele 2 pattern-uri folosite la etapa 2) builder pattern
+la calcularea average-ului pentru fiecare copil in parte si factory pattern
+la elfi de culoare Black si Pink.
+    Distribuirea cadourilor se realizeaza in functie de strategia care ii este
+data si de fiecare data cand un cadou este distribuit el se scade in fiecare an
+din lista de Hashmapuri.
+    Elfii sunt stocati intr-un hashmap numit elf si acel hashmap contine id-ul
+copilului si tipul de elf pe care il are. Cadourile sunt stocate in lista de
+cadouri si cantitatea cadourilor sunt stocate in lista de Hashmap-uri.
+    Average-ul se calculeaza conform formulei si daca valoarea este mai mare
+de 10 atunci averageScore primeste nota 10. Pentru fiecare calcul de average
+am folosit Strategy pattern, acesta se calculeaza in functie de varsta
+copilului.
+    Bugetul se calculeaza in functie de bugetUnit si acesta poate sa fie
+modificat sau nu in functie de elf-ul pe care il are copilul.
+    Pentru apelarea rezolvarii am folosit Singleton Pattern, in care prima
+data am calculat valorile pentru primul an si dupa pentru fiecare an in parte.
+Astfel, pentru fiecare an am creat o noua lista de copii care copiaza lista
+precedenta si updateaza datele in functie de anul respectiv.
+    In cazul in care in input un copil are dublu o categorie preferata se
+ruleaza o functie care ia element cu element si verifica daca acesta se
+repeta. (la fel pentru fiecare an care urmeaza se verifica daca preferintele
+se repeta)
 
-	Am realizat clase pentru stocarea datelor(copil, cadou, schimbari anuale,
-update copii), pentru citire (InputData, InputLoader) si pentru afisare
-(AnnualChanges, AnnualChildren). Clasa de Constants contine constantele
-necesare pentru citire si scriere. Clasa Utils contine functii care ajuta la
-convertarea a diferitelor liste sau Arrays si distribuirea cadourilor.
 
-	Average se realizeaza in functie de varsta si avem 3 tipuri(pentru copil,
-pentru bebelus si pentru teen) fiecare avand metoda lui de calculare.
-
-	In annualChildren se gasesc functiile necesare pentru updatare in fiecare
-an, iar lista de copii creata in fiecare an se salveaza in annualChanges urmand
-sa fie afisata la final.
 	
