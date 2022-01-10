@@ -1,8 +1,5 @@
 package run.InputClass;
 
-import run.NiceScore;
-import run.elf.BlackOrPink;
-import run.elf.RunBlackOrPink;
 import run.elf.Yellow;
 
 import java.util.ArrayList;
@@ -93,7 +90,7 @@ public final class AnnualChildren {
     }
 
     /**
-     * realizez update-ul pentru fiecare an si salvez fiecare lisat
+     * realizez update-ul pentru fiecare an si salvez fiecare lista
      * de copii in children
      * @param annualChanges
      * @param children
@@ -114,9 +111,11 @@ public final class AnnualChildren {
             updateGift(listGift, annualChanges.get(i).getGiftList());
             updateChild(children1, annualChanges.get(i).getNewChildren());
             updateDataChild(annualChanges.get(i).getChildrenUpdates(), children1, elf);
-            calculateData(children1, santaBudget, listGift, listScoreBonus, elf, annualChanges.get(i), quantityYear.get(i + 1), 1, quantityYear);
+            calculateData(children1, santaBudget, listGift, listScoreBonus, elf,
+                    annualChanges.get(i), quantityYear.get(i + 1), 1, quantityYear);
             for (Child child: children1.getChildren()) {
-                Yellow.YellowRun(child, elf.get(child.getId()), listGift, quantityYear.get(i), quantityYear);
+                Yellow.yellowRun(child, elf.get(child.getId()), listGift,
+                        quantityYear.get(i), quantityYear);
             }
             children.getAnnualChildren().add(children1);
         }

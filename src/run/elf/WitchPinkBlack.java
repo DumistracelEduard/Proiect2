@@ -5,8 +5,14 @@ import run.InputClass.Child;
 import java.util.HashMap;
 
 public class WitchPinkBlack {
-    public BlackOrPink witch(Child child, HashMap<Integer, String> elf) {
-        if(elf.get(child.getId()) == null) {
+    /**
+     * verifica ce fel de tip e de elf
+     * @param child
+     * @param elf
+     * @return
+     */
+    public BlackOrPink witch(final Child child, final HashMap<Integer, String> elf) {
+        if (elf.get(child.getId()) == null) {
             return null;
         }
         if (elf.get(child.getId()).equals("yellow")) {

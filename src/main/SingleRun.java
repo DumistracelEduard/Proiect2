@@ -5,17 +5,24 @@ import run.Constants;
 import run.DataStore.InputData;
 import run.DataStore.InputLoader;
 import run.GiftDistribution;
-import run.InputClass.*;
+import run.InputClass.AnnualChanges;
+import run.InputClass.AnnualChildren;
+import run.InputClass.Child;
+import run.InputClass.Children;
+import run.InputClass.Gift;
 import run.NiceScore;
 import run.Utils;
-import run.elf.RunBlackOrPink;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
 
 public final class SingleRun {
     private static SingleRun instance = null;
@@ -67,7 +74,8 @@ public final class SingleRun {
                                      final HashMap<Integer, String> elf,
                                      final AnnualChanges annualChanges,
                                      final HashMap<String, Integer> quantity,
-                                     final Integer year, List<HashMap<String, Integer>> quantityYear) {
+                                     final Integer year,
+                                     final List<HashMap<String, Integer>> quantityYear) {
         double sum = 0;
         double budgetUnit, scoreBonus;
         for (Child child : children.getChildren()) {
@@ -81,7 +89,8 @@ public final class SingleRun {
             sum += child.getAverageScore();
         }
         budgetUnit = santaBudget / sum;
-        GiftDistribution.witchStrategy(children, listGift, annualChanges, quantity, elf, budgetUnit, year, quantityYear);
+        GiftDistribution.witchStrategy(children, listGift, annualChanges,
+                quantity, elf, budgetUnit, year, quantityYear);
     }
 
     /**
@@ -98,28 +107,25 @@ public final class SingleRun {
         if (!Files.exists(path)) {
             Files.createFile(path);
         }
-        System.out.println(input);
-        for (int i = 0; i < inputData.getQuantity().size(); ++i) {
-            System.out.println(i);
-            for (String name: inputData.getQuantity().get(i).keySet()) {
-                System.out.println(name + " " + inputData.getQuantity().get(i).get(name));
-            }
-        }
+
         HashMap<Integer, String> listElf = inputData.getListElf();
         List<Object> listGift = (List<Object>) inputData.getDataStore().get(1);
         HashMap<String, ArrayList<Gift>> gifts = Utils.convertObjectGift(listGift);
 
         Children children = new Children(inputData.getDataStore());
-        calculateData(children, inputData.getSantaBudget(), gifts, inputData.getListScoreBonus(), listElf, inputData.getAnnualChanges().get(0), inputData.getQuantity().get(0), 0, inputData.getQuantity());
+        calculateData(children, inputData.getSantaBudget(), gifts, inputData.getListScoreBonus(),
+                listElf, inputData.getAnnualChanges().get(0),
+                inputData.getQuantity().get(0), 0, inputData.getQuantity());
         Collections.sort(children.getChildren(), new Comparator<Child>() {
             @Override
-            public int compare(Child o1, Child o2) {
+            public int compare(final Child o1, final Child o2) {
                 return Integer.compare(o1.getId(), o2.getId());
             }
         });
         AnnualChildren annualChildren = new AnnualChildren(inputData.getNumberOfYears(), children);
         annualChildren.annualUpdate(inputData.getAnnualChanges(), annualChildren,
-                gifts, inputData.getNumberOfYears(), inputData.getListScoreBonus(), listElf, inputData.getQuantity());
+                gifts, inputData.getNumberOfYears(), inputData.getListScoreBonus(),
+                listElf, inputData.getQuantity());
 
         ObjectMapper objectMapper = new ObjectMapper();
         try {

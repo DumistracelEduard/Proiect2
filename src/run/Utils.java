@@ -2,11 +2,9 @@ package run;
 
 import run.InputClass.Child;
 import run.InputClass.ChildUpdate;
-import run.InputClass.Children;
 import run.InputClass.Gift;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import run.elf.RunBlackOrPink;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -82,7 +80,11 @@ public final class Utils {
      * @param array
      * @return
      */
-    public static ArrayList<Gift> convertJSONArrayGift(final JSONArray array, HashMap<String, Integer> quantity, int i, List<HashMap<String, Integer>> quantityYear) {
+    public static ArrayList<Gift> convertJSONArrayGift(final JSONArray array,
+                                                       final HashMap<String, Integer> quantity,
+                                                       final int i,
+                                                       final List<HashMap
+                                                               <String, Integer>> quantityYear) {
         if (array != null) {
             ArrayList<Gift> finalArrayGift = new ArrayList<>();
             for (Object object : array) {
@@ -97,14 +99,15 @@ public final class Utils {
                     String name = (String) ((JSONObject) object)
                             .get(Constants.PRODUCTNAME);
                     Integer quantityProduct = quantity.get(name);
-                    quantityProduct += Integer.parseInt(((JSONObject) object).get(Constants.QUANTITY)
+                    quantityProduct += Integer.parseInt(((JSONObject) object)
+                            .get(Constants.QUANTITY)
                             .toString());
                     quantity.put(name, quantityProduct);
                 } else {
                     quantity.put((String) ((JSONObject) object)
                                     .get(Constants.PRODUCTNAME),
-                            Integer.parseInt(((JSONObject) object).get(Constants.QUANTITY)
-                                    .toString()));
+                            Integer.parseInt(((JSONObject) object).get(Constants
+                                            .QUANTITY).toString()));
                 }
             }
             return finalArrayGift;
@@ -118,8 +121,10 @@ public final class Utils {
      * @param array
      * @return
      */
-    public static ArrayList<Child> convertJSONArrayChildren(final JSONArray array, final HashMap<Integer, String> elf,
-                                                            final HashMap<Integer, Double> listScoreBonus) {
+    public static ArrayList<Child> convertJSONArrayChildren(final JSONArray array,
+                                                            final HashMap<Integer, String> elf,
+                                                            final HashMap<Integer, Double>
+                                                                    listScoreBonus) {
         if (array != null) {
             ArrayList<Child> newChildrenList = new ArrayList<>();
             for (Object object : array) {
@@ -136,7 +141,8 @@ public final class Utils {
                                 .toString())));
                 if ((String) ((JSONObject) object).get(Constants.ELF) != null) {
                     elf.put(Integer.parseInt(((JSONObject) object)
-                            .get(Constants.ID).toString()), (String) ((JSONObject) object).get(Constants.ELF));
+                            .get(Constants.ID).toString()), (String) ((JSONObject) object)
+                            .get(Constants.ELF));
                 }
                 listScoreBonus.put(Integer.parseInt(((JSONObject) object)
                                     .get(Constants.ID).toString()),

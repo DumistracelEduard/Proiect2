@@ -9,9 +9,22 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
-public class Yellow {
-    public static void YellowRun(Child child, String elf, HashMap<String, ArrayList<Gift>> gifts,
-                          HashMap<String, Integer> quantity, final List<HashMap<String, Integer>> quantityYear) {
+public final class Yellow {
+    private Yellow() { }
+
+    /**
+     * in caz ca elful este yellow se ia primul cadou din prima prefererinta
+     * doar daca copilul nu are cadou sau cadoul inca e pe stoc
+     * @param child
+     * @param elf
+     * @param gifts
+     * @param quantity
+     * @param quantityYear
+     */
+    public static void yellowRun(final Child child, final String elf,
+                                 final HashMap<String, ArrayList<Gift>> gifts,
+                                 final HashMap<String, Integer> quantity,
+                                 final List<HashMap<String, Integer>> quantityYear) {
         if (elf.equals("yellow")) {
             if (child.getReceivedGifts().size() != 0) {
                 return;
@@ -26,9 +39,11 @@ public class Yellow {
                 };
                 giftsList.sort(comparator);
 
-                if (quantity.containsKey(giftsList.get(0).getProductName()) && quantity.get(giftsList.get(0).getProductName()) > 0) {
+                if (quantity.containsKey(giftsList.get(0).getProductName())
+                        && quantity.get(giftsList.get(0).getProductName()) > 0) {
                     child.getReceivedGifts().add(giftsList.get(0));
-                    GiftDistribution.updateQuantity(quantityYear, giftsList.get(0).getProductName());
+                    GiftDistribution.updateQuantity(quantityYear, giftsList.get(0)
+                            .getProductName());
                 }
             }
         }

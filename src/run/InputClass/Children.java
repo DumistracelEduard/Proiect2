@@ -28,11 +28,4 @@ public final class Children {
     public List<Child> getChildren() {
         return children;
     }
-
-    @Override
-    public String toString() {
-        return "Children{" +
-                "children=" + children +
-                '}';
-    }
 }

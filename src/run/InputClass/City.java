@@ -17,48 +17,47 @@ public class City {
         this.children = new ArrayList<>();
     }
 
+    /**
+     * adauga in lista de Score-uri ale orasului
+     * @param niceScore
+     */
     public void addScore(final double niceScore) {
         this.niceScores.add(niceScore);
     }
 
+    /**
+     * adauga copilul in lista si sorteaza dupa ID si calcueaza
+     * de fiecare data cand se adauga un copil Score-ul orasului
+     * @param child
+     */
     public void addChild(final Child child) {
         this.children.add(child);
         Collections.sort(children, new Comparator<Child>() {
             @Override
-            public int compare(Child o1, Child o2) {
+            public int compare(final Child o1, final Child o2) {
                 return Integer.compare(o1.getId(), o2.getId());
             }
         });
-        double sum =0;
-        for (Double score: niceScores) {
-            sum += score;
+        double sum = 0;
+        for (Double scoreAdd: niceScores) {
+            sum += scoreAdd;
         }
         this.score = sum / niceScores.size();
     }
 
-    public double getScore() {
+    public final double getScore() {
         return score;
     }
 
-    public String getName() {
+    public final String getName() {
         return name;
     }
 
-    public ArrayList<Double> getNiceScores() {
+    public final ArrayList<Double> getNiceScores() {
         return niceScores;
     }
 
-    public ArrayList<Child> getChildren() {
+    public final ArrayList<Child> getChildren() {
         return children;
-    }
-
-    @Override
-    public String toString() {
-        return "City{" +
-                "score=" + score +
-                ", name='" + name + '\'' +
-                ", niceScores=" + niceScores +
-                ", children=" + children +
-                "}\n";
     }
 }

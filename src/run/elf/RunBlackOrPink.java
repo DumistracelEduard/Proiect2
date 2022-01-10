@@ -4,11 +4,19 @@ import run.InputClass.Child;
 
 import java.util.HashMap;
 
-public class RunBlackOrPink {
-    public static void run(Child child, HashMap<Integer, String> elf) {
+public final class RunBlackOrPink {
+
+    private RunBlackOrPink() { }
+    /**
+     * apeleaza functia de a verifica ce elf e si apeleaza metoda de calculare
+     * specifica
+     * @param child
+     * @param elf
+     */
+    public static void run(final Child child, final HashMap<Integer, String> elf) {
         WitchPinkBlack witchPinkBlack = new WitchPinkBlack();
         BlackOrPink blackOrPink = witchPinkBlack.witch(child, elf);
-        if(blackOrPink != null ) {
+        if (blackOrPink != null) {
             blackOrPink.run(child);
         }
     }

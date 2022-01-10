@@ -1,10 +1,5 @@
 package run.InputClass;
 
-import run.Average.Average;
-import run.Average.AverageBaby;
-import run.Average.AverageKid;
-import run.Average.AverageTeen;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -48,6 +43,10 @@ public class Child {
         this.receivedGifts = new ArrayList<>();
     }
 
+    /**
+     * verifica daca in lista de preferinte exista de 2 ori sau
+     * mai mult una dintre preferinte si daca da o sterge
+     */
     public void checkPreferences() {
         for (int i = 0; i < giftsPreferences.size(); ++i) {
             for (int j = i + 1; j < giftsPreferences.size() - 1; ++j) {
@@ -158,21 +157,5 @@ public class Child {
 
     public final List<Gift> getReceivedGifts() {
         return receivedGifts;
-    }
-
-    @Override
-    public String toString() {
-        return "Child{" +
-                "id=" + id +
-                ", lastName='" + lastName + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", city='" + city + '\'' +
-                ", age=" + age +
-                ", giftsPreferences=" + giftsPreferences +
-                ", averageScore=" + averageScore +
-                ", niceScoreHistory=" + niceScoreHistory +
-                ", assignedBudget=" + assignedBudget +
-                ", receivedGifts=" + receivedGifts +
-                '}';
     }
 }

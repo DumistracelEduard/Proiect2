@@ -91,7 +91,8 @@ public final class InputLoader {
                                         .get(Constants.CATEGORY)
                                 ));
                         quantity.put((String) ((JSONObject) jsonGift)
-                                .get(Constants.PRODUCTNAME), Integer.parseInt(((JSONObject) jsonGift).get(Constants.QUANTITY).toString()));
+                                .get(Constants.PRODUCTNAME), Integer.parseInt(((JSONObject)
+                                jsonGift).get(Constants.QUANTITY).toString()));
                     }
                 }
                 quantityYear.add(0, quantity);
